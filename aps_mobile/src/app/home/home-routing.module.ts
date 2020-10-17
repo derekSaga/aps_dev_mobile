@@ -6,12 +6,6 @@ const routes: Routes = [
   {
     path: '',
     component: HomePage,
-    children: [
-      {
-        path: 'acoes',
-        loadChildren: () => import('./acoes/acoes.module').then(m => m.AcoesPageModule)
-      }
-    ]
   },
 
 ];

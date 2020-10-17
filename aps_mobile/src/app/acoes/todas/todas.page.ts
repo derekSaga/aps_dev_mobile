@@ -1,13 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-acoes',
-  templateUrl: './acoes.page.html',
-  styleUrls: ['./acoes.page.scss'],
+  selector: 'app-todas',
+  templateUrl: './todas.page.html',
+  styleUrls: ['./todas.page.scss'],
 })
-export class AcoesPage implements OnInit {
-
-  constructor() { }
+export class TodasPage implements OnInit {
 
   public acaoAtual = 0;
 
@@ -156,6 +154,9 @@ export class AcoesPage implements OnInit {
     }
   }
 
+  constructor() { }
+
   ngOnInit() {
   }
+
 }

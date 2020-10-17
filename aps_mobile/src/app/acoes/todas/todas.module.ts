@@ -4,17 +4,17 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { AcoesPageRoutingModule } from './acoes-routing.module';
+import { TodasPageRoutingModule } from './todas-routing.module';
 
-import { AcoesPage } from './acoes.page';
+import { TodasPage } from './todas.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    AcoesPageRoutingModule
+    TodasPageRoutingModule
   ],
-  declarations: [AcoesPage]
+  declarations: [TodasPage]
 })
-export class AcoesPageModule {}
+export class TodasPageModule {}
