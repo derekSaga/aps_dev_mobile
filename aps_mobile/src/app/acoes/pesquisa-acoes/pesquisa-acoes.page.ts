@@ -16,6 +16,7 @@ export class PesquisaAcoesPage implements OnInit {
   public pesquisa_acao(){
     this.resultadoPesquisa =  acoes.find(o => o.acao === this.nomeAcao.toUpperCase());
     if (this.resultadoPesquisa == null){
+      this.controll = false;
       this.resultadoPesquisa = 'Ação não encontrada';
     }else{
       this.controll = true;
