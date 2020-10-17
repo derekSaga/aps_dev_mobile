@@ -10,7 +10,11 @@ const routes: Routes = [
     path: '',
     redirectTo: 'home',
     pathMatch: 'full'
+  },  {
+    path: 'acoes',
+    loadChildren: () => import('./acoes/acoes.module').then( m => m.AcoesPageModule)
   },
+
 ];
 
 @NgModule({
