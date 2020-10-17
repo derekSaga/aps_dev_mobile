@@ -6,9 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./acoes.page.scss'],
 })
 export class AcoesPage implements OnInit {
-  
-  public acaoAtual = 0;
 
+  public acaoAtual = 0;
   public acoes = [
     {
       nome_empresa: 'Metalurgica Gerdau S.A.',
