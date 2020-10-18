@@ -4,7 +4,7 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: 'home',
-    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
+    loadChildren: () => import('./home/home.module').then(m => m.HomePageModule)
   },
   {
     path: '',
@@ -12,26 +12,22 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
-<<<<<<< HEAD
     path: 'acoes',
-    loadChildren: () => import('./acoes/acoes.module').then( m => m.AcoesPageModule)
+    loadChildren: () => import('./acoes/acoes.module').then(m => m.AcoesPageModule)
   },
   {
     path: 'quiz-perfil-investimento',
-    loadChildren: () => import('./quiz-perfil-investimento/quiz-perfil-investimento.module').then( m => m.QuizPerfilInvestimentoPageModule)
+    loadChildren: () => import('./quiz-perfil-investimento/quiz-perfil-investimento.module').then(m => m.QuizPerfilInvestimentoPageModule)
   },
-=======
+  {
     path: 'menu',
-    loadChildren: () => import('./menu/menu.module').then( m => m.MenuPageModule)
+    loadChildren: () => import('./menu/menu.module').then(m => m.MenuPageModule)
   },
   {
     path: '',
     redirectTo: 'menu',
     pathMatch: 'full'
-  }, 
-  
-
->>>>>>> origin/jennifer_21100757
+  }
 ];
 
 @NgModule({

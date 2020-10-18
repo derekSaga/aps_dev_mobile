@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from '@ionic/angular';
-import {MenuPage} from '../menu/menu.page'
+import {MenuPage} from '../menu/menu.page';
 
 
 @Component({
@@ -15,8 +15,5 @@ export class HomePage {
   menuPage = MenuPage;
 
   constructor(public navCtrl: NavController) {
-  
   }
-
- 
 }
