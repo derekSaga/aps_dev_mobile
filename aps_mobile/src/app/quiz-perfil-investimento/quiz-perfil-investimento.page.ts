@@ -18,22 +18,12 @@ export class QuizPerfilInvestimentoPage {
 
   public possibleResults = [
     { letter: 'Iniciante', investmentType:'Para aumentar sua renda, existem duas maneiras principais de ganhar dinheiro: ou você trabalha pelo seu dinheiro, ou seu dinheiro trabalha para você. Em vez de desperdiçar seu dinheiro, ou mantê-lo em uma conta bancária recebendo taxas de juros mínimas, você pode ganhar mais dinheiro ou vê-lo crescer, investindo sabiamente. Os investimentos inicialmente podem não trazer grandes retornos, mas se você tiver consistência, há recompensas esperando por você no longo prazo. Investir também é uma ótima apólice de seguro contra interrupções de carreira que podem ter um grande impacto na sua vida, caso você não esteja preparado com uma reserva de emergencia' ,image: 'https://magportalmagprdstg.blob.core.windows.net/public/2020/09/mercado-financeiro-para-iniciantes-1.jpg' },
-    { letter: 'Conservador', investmentType:'Esse tipo de investidor prioriza a segurança em suas aplicações. Em sua diversificação de investimentos, o conservador deve manter a maior parte da sua carteira de investimentos em produtos de baixo risco, como por exemplo:Tesouro Direto,CDB,LC,LCI/LCA,Fundos de renda fixa' , image: 'https://www.jornalcontabil.com.br/wp-content/uploads/2019/10/investimento-1.jpg' },
-    { letter: 'Moderado', investmentType:''  ,image: 'https://www.google.com/search?q=investimento&rlz=1C1CHBD_pt-PTBR892BR892&tbm=isch&sxsrf=ALeKk03sSdEgl193FJssItQTQISurNqhFQ:1602945625636&source=lnms&sa=X&ved=0ahUKEwj5yvDk7bvsAhVdJrkGHV_ODpEQ_AUIECgC&biw=1536&bih=722&dpr=1.25#imgrc=_ho1oNWQaNB3-M' },
-    { letter: 'Agressivo', investmentType:'' ,image: 'https://i1.wp.com/www.osmelhoresinvestimentos.com.br/wp-content/uploads/2018/10/AN%C3%81LISE-GR%C3%81FICA-SAIBA-O-QUE-%C3%89-Os-Melhores-Investimentos-Gr%C3%A1fico-de-A%C3%A7%C3%B5es.jpg?resize=900%2C450&ssl=1' },
+    { letter: 'Moderado', investmentType:'O investidor com perfil moderado deseja segurança em seus investimentos mas aceita algum tipo de risco para obter retornos acima da média. Busca ganhos a médio-longo prazo e, geralmente, detém algum tipo de conhecimento sobre investimentos. O investidor de perfil moderado almeja uma rentabilidade que supere a inflação, obtendo ganhos reais para o seu patrimônio. A expectativa de rentabilidade para uma carteira moderada é de 115% do CDI, admitindo uma volatilidade (risco) de 2%.'  ,image: 'https://www.google.com/search?q=investimento&rlz=1C1CHBD_pt-PTBR892BR892&tbm=isch&sxsrf=ALeKk03sSdEgl193FJssItQTQISurNqhFQ:1602945625636&source=lnms&sa=X&ved=0ahUKEwj5yvDk7bvsAhVdJrkGHV_ODpEQ_AUIECgC&biw=1536&bih=722&dpr=1.25#imgrc=_ho1oNWQaNB3-M' },
+    { letter: 'Conservador', investmentType:'Esse tipo de investidor prioriza a segurança em suas aplicações. Em sua diversificação de investimentos, o conservador deve manter a maior parte da sua carteira de investimentos em produtos de baixo risco.' , image: 'https://www.jornalcontabil.com.br/wp-content/uploads/2019/10/investimento-1.jpg' },
+    { letter: 'Agressivo', investmentType:'O investidor agressivo está associado a clientes que possuem total conhecimento e domínio do mercado financeiro e de investimentos. Este investidor busca retornos expressivos, suportando quaisquer riscos. O investidor de perfil agressivo almeja elevada rentabilidade para o seu patrimônio e, por isso, lida com naturalidade prejuízos e longos períodos no negativo, se necessário. A expectativa de rentabilidade de longo prazo para essa carteira é de 140% do CDI, admitindo uma volatilidade (risco) de 8%.' ,image: 'https://i1.wp.com/www.osmelhoresinvestimentos.com.br/wp-content/uploads/2018/10/AN%C3%81LISE-GR%C3%81FICA-SAIBA-O-QUE-%C3%89-Os-Melhores-Investimentos-Gr%C3%A1fico-de-A%C3%A7%C3%B5es.jpg?resize=900%2C450&ssl=1' },
     ];
 
   public questions: Question[] = [
-    {
-      text: 'Qual a sua idade?',
-      checkedAlternative: null,
-      alternatives: [
-        'Até 25 anos',
-        'De 26 e 40 anos',
-        'De 41 e 64 anos',
-        '65 anos ou mais',
-      ]
-    },
     {
       text: 'Qual é o seu objetivo ao investir?',
       checkedAlternative: null,

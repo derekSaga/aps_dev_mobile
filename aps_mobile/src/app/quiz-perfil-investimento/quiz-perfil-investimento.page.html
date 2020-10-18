@@ -1,14 +1,14 @@
 <ion-header>
-  <ion-toolbar color="primary">
+  <ion-toolbar color="dark">
     <ion-title>
-      NOME DO APP
+      FinApp
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-item>
   <ion-text class="description">
-    <h2>Simulador de investimento</h2>
+    <h2>Perfil de investimento</h2>
     <h5>Saiba qual é o seu perfil de investimento e invista de forma inteligente.</h5>
   </ion-text>
 </ion-item>
@@ -27,7 +27,7 @@
         </ion-radio-group>
       </ion-list>
 
-      <ion-button (click)="next()" expand="block" [disabled]="questions[currentQuestion].checkedAlternative == null">
+      <ion-button color="dark" (click)="next()" expand="block" [disabled]="questions[currentQuestion].checkedAlternative == null">
         <ion-icon slot="end" name="chevron-forward"></ion-icon>
         Próxima pergunta
       </ion-button>
@@ -37,7 +37,7 @@
   <ion-card *ngIf="showResult" color="secundary">
     <img [src]="possibleResults[mostAnswered].image" class="tv-show-image">
     <ion-card-content>
-      <h2>
+      <h2  style="padding-bottom: 4%;">
         Parabéns! Identificamos você como um investidor
         {{possibleResults[mostAnswered].letter}}
       </h2>
@@ -45,7 +45,7 @@
         E isso é ótimo!
         {{possibleResults[mostAnswered].investmentType}}
       </h3>
-      <h3 style="font-weight: bolder;">Clique em Saiba Mais e conheça as melhores opções de investimento para o seu perfil!</h3>
+      <h3 style="font-weight: bolder; padding-top: 3%;">Clique em Saiba Mais e conheça as melhores opções de investimento para o seu perfil!</h3>
        <ion-grid>
           <ion-row>
             <ion-col col-6>
