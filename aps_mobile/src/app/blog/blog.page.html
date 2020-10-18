@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar color = "dark">
+    <ion-title>FinApp</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-item>
+  <h2 style="font-weight: bold;">Blog FinApp</h2>
+</ion-item>
+
+<ion-item>
+  <ion-icon slot="start" name="search" class="ion-margin-start"></ion-icon>
+  <ion-input placeholder="Pesquisar" ></ion-input>
+</ion-item>
+
+<ion-content >
+
+  <ion-card (click) = "showModal()" *ngFor="let i of [1,2,3,4]" color= "dark" >
+    <img src="https://i0.wp.com/www.dci.com.br/wp-content/uploads/2020/07/Screenshot_37.png?resize=925%2C607&ssl=1">
+    <ion-card-header >
+      <ion-card-subtitle style="color: white ">Bolsa de valores</ion-card-subtitle>
+      <ion-card-title style="color: white ">Como investir</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content  >
+      <p>Será que investir na Bolsa de Valores é mesmo tão caro e difícil quanto você pensa?</p>
+    </ion-card-content>
+  </ion-card>
+
+  
+  
