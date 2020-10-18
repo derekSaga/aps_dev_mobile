@@ -8,20 +8,22 @@
 
   <ion-content class="conteudo">
     <h2 class="titulo">Bem-Vindo ao FinApp</h2>
-    <h4 class="subtitulo">Planeje sua vida financeira</h4>
-
-
-    
-      
+ 
       <ion-item class="input">
         <ion-label position="floating" class="label">Como podemos te chamar?</ion-label>
         <ion-input [(ngModel)]="name" type="String" ></ion-input>
       </ion-item>
   
-      <ion-button href="/menu" class="button" color="medium">
-        começar
-        
-      </ion-button>
+      <ion-row>
+        <ion-col style="align-items: center; text-align: center;">
+          <ion-button href="/menu"  class="button" color="medium">
+            <ion-icon name="chevron-forward-circle-outline"></ion-icon>
+              
+             
+           </ion-button>
+        </ion-col>
+      </ion-row>
+      
    
 
     
