@@ -25,7 +25,7 @@ export class ResultsPage implements OnInit {
       var textOffset = (doc.internal.pageSize.width - textWidth) / 2;
       doc.text(textOffset, y, text);
   }
-    centeredText("Olá, seu perfil de investimento é "+tipo+"!", 10);
+    centeredText(nome+", seu perfil de investimento é "+tipo+"!", 10);
     doc.text("Para pessoas com o seu perfil de investimentos recomendamos as Seguintes", 10, 30);
     doc.text("aplicações para investir:", 10, 40);
     
