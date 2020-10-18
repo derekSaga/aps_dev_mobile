@@ -10,19 +10,15 @@ const routes: Routes = [
     path: '',
     redirectTo: 'home',
     pathMatch: 'full'
-  },  {
+  },
+  {
     path: 'acoes',
     loadChildren: () => import('./acoes/acoes.module').then( m => m.AcoesPageModule)
   },
-<<<<<<< HEAD
-=======
   {
     path: 'quiz-perfil-investimento',
     loadChildren: () => import('./quiz-perfil-investimento/quiz-perfil-investimento.module').then( m => m.QuizPerfilInvestimentoPageModule)
   },
-];
->>>>>>> origin/lorena_21108661
-
 ];
 
 @NgModule({
