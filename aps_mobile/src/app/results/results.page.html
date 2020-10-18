@@ -1,24 +1,66 @@
-<ion-header>
+<ion-header >
   <ion-toolbar>
     <ion-buttons routerLink="/home" slot="start">
       <ion-button>
         <ion-icon name="home" slot="icon-only"></ion-icon>
       </ion-button>
     </ion-buttons>
-    <ion-title>Resultado</ion-title>
+    <ion-title>FinApp</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <div id="content" #content>
-    <h1>Resultado:</h1>
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi assumenda consectetur deserunt, amet dolores mollitia, alias impedit fugiat, eos non sequi provident hic repudiandae nobis consequuntur illum officiis? Ea, odio.
-    <br>
-  </div>
-  <ion-button (click)="gerarPDF()">
-    Gerar PDF
-  </ion-button>
-  <ion-button>
-    Refazer teste
-  </ion-button>
+<ion-item color="dark">
+  <ion-title class="ion-text-center">
+    Perfil Conservador:
+  </ion-title>
+</ion-item>
+
+<ion-content color="dark">
+  <ion-item color="dark">
+    <p>
+      Para pessoas com o seu perfil de investimentos recomendamos as Seguintes aplicações para investir. 
+      <br>
+      <br>
+      <strong>Curto prazo:</strong>
+      <br>
+      <br>
+      <em>Tesouro Selic - 34% do seu capital para investimento</em>
+      <br>
+      <br>
+      <em>CDB Liquidez Diária - 33% do seu capital para investimento</em>
+      <br>
+      <br>
+      <em>Fundos RF - 33% do seu capital para investimento</em>
+      <br>
+      <br>
+      <br>
+      <strong>Médio prazo:</strong>
+      <br>
+      <br>
+      <em>CDB, LCI/LCA, LC - 34% do seu capital para investimento</em>
+      <br>
+      <br>
+      <em>Fundo Crédito Privado - 33% do seu capital para investimento</em>
+      <br>
+      <br>
+      <br>
+      <strong>Longo prazo:</strong>
+      <br>
+      <br>
+      <em>Tesouro IPCA - 34% do seu capital para investimento</em>
+      <br>
+      <br>
+      <em>Fundo Crédito Privado - 33% do seu capital para investimento</em>
+      <br>
+      <br>
+      <ion-button size="default" (click)="gerarPDF('Trouxa')" color="light" expand="block">
+        Gerar PDF
+      </ion-button>
+      <ion-button size="default" color="light" expand="block">
+        Refazer teste
+      </ion-button>
+    </p>
+    
+  </ion-item>  
+
 </ion-content>
