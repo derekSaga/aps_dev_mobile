@@ -1,0 +1,57 @@
+#container {
+  text-align: center;
+
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.titulo{
+  display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    margin-top: 20%;
+    margin-left: 3%;
+    color: black;
+  
+}
+.titulo2{
+  display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    margin-top: 8%;
+    margin-left: 3%;
+    color: black;
+  
+}
+
+.btn1{
+  display: flex;
+  margin-top: 10%;
+  height: 15%;
+  margin-left: 2%;
+  margin-right: 2%;
+  
+}
+.btn3{
+  display: flex;
+  margin-top: 10%;
+  height: 15%;
+  margin-left: 2%;
+  margin-right: 2%;
+}
+.btn2{
+  display: flex;
+  margin-top: 10%;
+  height: 15%;
+  margin-left: 2%;
+  margin-right: 2%;
+}
+
+ion-content{
+
+  // --ion-background-color:#1b2c60;
+}
