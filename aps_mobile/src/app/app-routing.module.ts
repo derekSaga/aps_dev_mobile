@@ -27,8 +27,13 @@ const routes: Routes = [
     path: '',
     redirectTo: 'menu',
     pathMatch: 'full'
-  }
+  },
+  {
+    path: 'results',
+    loadChildren: () => import('./results/results.module').then( m => m.ResultsPageModule)
+  },
 ];
+
 
 @NgModule({
   imports: [
