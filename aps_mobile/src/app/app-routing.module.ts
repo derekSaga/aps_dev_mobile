@@ -12,7 +12,6 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
-<<<<<<< HEAD
     path: 'acoes',
     loadChildren: () => import('./acoes/acoes.module').then(m => m.AcoesPageModule)
   },
@@ -33,16 +32,10 @@ const routes: Routes = [
     path: 'results',
     loadChildren: () => import('./results/results.module').then( m => m.ResultsPageModule)
   },
-=======
+  {
     path: 'blog',
     loadChildren: () => import('./blog/blog.module').then( m => m.BlogPageModule)
-  },
-  {
-    path: '',
-    redirectTo: 'blog',
-    pathMatch: 'full'
-  },
->>>>>>> 8a5fab37c859418e5b18e74edaa7bb53b45914c3
+  }
 ];
 
 

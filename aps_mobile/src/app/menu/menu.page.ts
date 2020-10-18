@@ -12,8 +12,4 @@ import { NavParams } from '@ionic/angular';
 
 
 export class MenuPage {
- 
-  
-  
-
 }

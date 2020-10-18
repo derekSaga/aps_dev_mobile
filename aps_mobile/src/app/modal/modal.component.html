@@ -1,15 +1,32 @@
-<ion-header>
-  <ion-toolbar color = "dark">
+<ion-header >
+
+  <ion-toolbar color='dark'>
+
+    <ion-buttons (click)="close()" slot="start">
+
+      <ion-button>
+
+        <ion-icon name="arrow-back" slot="icon-only"></ion-icon>
+
+      </ion-button>
+
+    </ion-buttons>
+
     <ion-title>FinApp</ion-title>
+
   </ion-toolbar>
+
 </ion-header>
-<ion-item>
-  <h3 style="font-weight: bold;">Como Investir Na Bolsa de Valores</h3>
-</ion-item>
+
 <ion-content (click) = "close()">
-  <img src="https://i0.wp.com/www.dci.com.br/wp-content/uploads/2020/07/Screenshot_37.png?resize=925%2C607&ssl=1">
-  <ion-item>
-    <p>
+  
+  <ion-card>
+    <img src="https://i0.wp.com/www.dci.com.br/wp-content/uploads/2020/07/Screenshot_37.png?resize=925%2C607&ssl=1">
+    <ion-card-header>
+      <ion-card-title>Como Investir Na Bolsa de Valores</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
       Será que investir na Bolsa de Valores é mesmo tão caro e difícil quanto você pensa?<br/>
   
       Uma coisa é certa: se você pretende começar a investir em ações, é fundamental se informar sobre o assunto.<br/>
@@ -25,8 +42,8 @@
       
       Preparamos este guia para que qualquer pessoa possa investir em ações.<br/>
        Seja você um investidor interessado em diversificação ou um que está começando do zero.<br/>
-    </p>
-  </ion-item>
+    </ion-card-content>
+  </ion-card>
   
 </ion-content>
 

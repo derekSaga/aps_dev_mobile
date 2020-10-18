@@ -1,6 +1,6 @@
 <ion-header >
   <ion-toolbar color = "dark">
-    <ion-buttons routerLink="/home" slot="start">
+    <ion-buttons routerLink="/menu" slot="start">
       <ion-button>
         <ion-icon name="home" slot="icon-only"></ion-icon>
       </ion-button>
@@ -10,7 +10,7 @@
 </ion-header>
 
 <ion-item>
-  <h2 style="font-weight: bold;">Blog FinApp</h2>
+  <h2 style="font-weight: bold;">Blog de Finanças</h2>
 </ion-item>
 
 <ion-item>
@@ -21,7 +21,7 @@
 <ion-content >
 
   <ion-card (click) = "showModal()" *ngFor="let i of [1,2,3,4]" color= "dark" >
-    <img src="https://i0.wp.com/www.dci.com.br/wp-content/uploads/2020/07/Screenshot_37.png?resize=925%2C607&ssl=1">
+    <img [src]="'https://picsum.photos/id/'+(50 + i)+'/340/150'">
     <ion-card-header >
       <ion-card-subtitle style="color: white ">Bolsa de valores</ion-card-subtitle>
       <ion-card-title style="color: white ">Como investir</ion-card-title>

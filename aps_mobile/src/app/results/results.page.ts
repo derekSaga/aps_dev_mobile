@@ -1,4 +1,5 @@
 import { Component, OnInit} from '@angular/core';
+import { AlertController, ModalController, ToastController } from '@ionic/angular';
 import jsPDF from 'jspdf';
 
 
@@ -9,10 +10,12 @@ import jsPDF from 'jspdf';
 })
 export class ResultsPage implements OnInit {
 
-  constructor() {
-
-   }
-
+  constructor(
+    private toastController: ToastController,
+    private alertController: AlertController,
+    private modalController: ModalController
+  ) { }
+  
   ngOnInit() {
   }
 
