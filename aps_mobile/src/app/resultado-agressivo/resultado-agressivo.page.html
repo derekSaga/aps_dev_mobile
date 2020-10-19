@@ -1,0 +1,72 @@
+<ion-header >
+  <ion-toolbar color="dark">
+    <ion-buttons routerLink="/menu" slot="start">
+      <ion-button>
+        <ion-icon name="home" slot="icon-only"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>FinApp</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-item>
+  <ion-title class="ion-text-center">
+    Perfil Agressivo:
+  </ion-title>
+</ion-item>
+
+<ion-content>
+  <ion-item>
+    <p>
+      Para pessoas com o seu perfil de investimentos recomendamos as Seguintes aplicações para investir. 
+      <br>
+      <br>
+      <strong>Curto prazo:</strong>
+      <br>
+      <br>
+      <em>Perfis agressivos tendem a não possuir investimentos a curto prazo.</em>
+      <br>
+      <br>
+      <br>
+      <strong>Médio prazo:</strong>
+      <br>
+      <br>
+      <em>Fundos Multimercado - 25% do seu capital para investimento</em>
+      <br>
+      <br>
+      <br>
+      <em>Debêntures - 25% do seu capital para investimento</em>
+      <br>
+      <br>
+      <br>
+      <em>CRI/CRA - 25% do seu capital para investimento</em>
+      <br>
+      <br>
+      <br>
+      <em>COE - 25% do seu capital para investimento</em>
+      <br>
+      <br>
+      <br>
+      <strong>Longo prazo:</strong>
+      <br>
+      <br>
+      <em>Fundos Multimercado - 34% do seu capital para investimento</em>
+      <br>
+      <br>
+      <br>
+      <em>Debêntures - 33% do seu capital para investimento</em>
+      <br>
+      <br>
+      <br>
+      <em>CRI/CRA - 33% do seu capital para investimento</em>
+      <br>
+      <br>
+      <br>
+      <ion-button size="default" (click)="gerarPDF('Matheus', 'Agressivo')" color="dark" expand="block">
+        Gerar PDF
+      </ion-button>
+    </p>
+    
+  </ion-item>  
+
+</ion-content>

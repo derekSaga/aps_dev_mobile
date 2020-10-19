@@ -1,0 +1,52 @@
+<ion-header >
+  <ion-toolbar color="dark">
+    <ion-buttons routerLink="/menu" slot="start">
+      <ion-button>
+        <ion-icon name="home" slot="icon-only"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>FinApp</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-item>
+  <ion-title class="ion-text-center">
+    Perfil Iniciante:
+  </ion-title>
+</ion-item>
+
+<ion-content>
+  <ion-item>
+    <p>
+      Para pessoas com o seu perfil de investimentos recomendamos as Seguintes aplicações para investir. 
+      <br>
+      <br>
+      <strong>Curto prazo:</strong>
+      <br>
+      <br>
+      <em>Tesouro Direto - 34% do seu capital para investimento</em>
+      <br>
+      <br>
+      <br>
+      <em>CDB - 33% do seu capital para investimento</em>
+      <br>
+      <br>
+      <br>
+      <em>Fundos de investimentos em renda fixa - 33% do seu capital para investimento</em>
+      <br>
+      <br>
+      <br>
+      <strong>Médio prazo e Longo prazo:</strong>
+      <br>
+      <br>
+      <em>Para este perfil recomendamos apenas aplicações a curto prazo para que o aplicante consiga estudar neste meio tempo e passar para outro tipo de perfil.</em>
+      <br>
+      <br>
+      <ion-button size="default" (click)="gerarPDF('Matheus', 'Iniciante')" color="dark" expand="block">
+        Gerar PDF
+      </ion-button>
+    </p>
+    
+  </ion-item>  
+
+</ion-content>

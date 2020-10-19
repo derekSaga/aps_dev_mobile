@@ -29,13 +29,29 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
-    path: 'results',
-    loadChildren: () => import('./results/results.module').then( m => m.ResultsPageModule)
-  },
-  {
     path: 'blog',
     loadChildren: () => import('./blog/blog.module').then( m => m.BlogPageModule)
+  },
+  {
+    path: 'resultado-Conservador',
+    loadChildren: () => import('./resultado-conservador/resultado-conservador.module').then( m => m.ResultadoConservadorPageModule)
+  },
+  {
+    path: 'resultado-Moderado',
+    loadChildren: () => import('./resultado-moderado/resultado-moderado.module').then( m => m.ResultadoModeradoPageModule)
+  },
+  {
+    path: 'resultado-Agressivo',
+    loadChildren: () => import('./resultado-agressivo/resultado-agressivo.module').then( m => m.ResultadoAgressivoPageModule)
+  },
+  {
+    path: 'resultado-Iniciante',
+    loadChildren: () => import('./resultado-iniciante/resultado-iniciante.module').then( m => m.ResultadoIniciantePageModule)
   }
+
+
+
+
 ];
 
 

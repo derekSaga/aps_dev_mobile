@@ -2,13 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { AlertController, ModalController, ToastController } from '@ionic/angular';
 import jsPDF from 'jspdf';
 
-
 @Component({
-  selector: 'app-results',
-  templateUrl: './results.page.html',
-  styleUrls: ['./results.page.scss'],
+  selector: 'app-resultado-agressivo',
+  templateUrl: './resultado-agressivo.page.html',
+  styleUrls: ['./resultado-agressivo.page.scss'],
 })
-export class ResultsPage implements OnInit {
+export class ResultadoAgressivoPage implements OnInit {
 
   constructor(
     private toastController: ToastController,
@@ -36,25 +35,27 @@ export class ResultsPage implements OnInit {
     doc.setFontType("bold");
     doc.text("Curto prazo:", 10, 60);
     doc.setFontType("italic");
-    doc.text("Tesouro Selic - 34% do seu capital para investimento", 10, 70);
-    doc.setFontType("italic");
-    doc.text("CDB Liquidez Diária - 33% do seu capital para investimento", 10, 80);
-    doc.setFontType("italic");
-    doc.text("Fundos RF - 33% do seu capital para investimento", 10, 90);
+    doc.text("Perfis agressivos tendem a não possuir investimentos a curto prazo.", 10, 70);
 
     doc.setFontType("bold");
-    doc.text("Médio prazo:", 10, 110);
+    doc.text("Médio prazo:", 10, 90);
     doc.setFontType("italic");
-    doc.text("CDB, LCI/LCA, LC - 51% do seu capital para investimento", 10, 120);
+    doc.text("Fundos Multimercado - 25% do seu capital para investimento", 10, 100);
     doc.setFontType("italic");
-    doc.text("Fundo Crédito Privado - 49% do seu capital para investimento", 10, 130);
+    doc.text("Debêntures - 25% do seu capital para investimento", 10, 110);
+    doc.setFontType("italic");
+    doc.text("CRI/CRA - 25% do seu capital para investimento", 10, 120);
+    doc.setFontType("italic");
+    doc.text("COE - 25% do seu capital para investimento", 10, 130);
 
     doc.setFontType("bold");
     doc.text("Longo prazo:", 10, 150);
     doc.setFontType("italic");
-    doc.text("Tesouro IPCA - 51% do seu capital para investimento", 10, 160);
+    doc.text("Fundos Multimercado - 34% do seu capital para investimento", 10, 160);
     doc.setFontType("italic");
-    doc.text("Fundo Crédito Privado - 49% do seu capital para investimento", 10, 170);
+    doc.text("Debêntures - 33% do seu capital para investimento", 10, 170);
+    doc.setFontType("italic");
+    doc.text("CRI/CRA - 33% do seu capital para investimento", 10, 180);
     doc.save('test.pdf');
   }
 
