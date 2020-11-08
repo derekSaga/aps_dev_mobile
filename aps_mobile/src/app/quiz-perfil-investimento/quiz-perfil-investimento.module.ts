@@ -17,4 +17,8 @@ import { QuizPerfilInvestimentoPage } from './quiz-perfil-investimento.page';
   ],
   declarations: [QuizPerfilInvestimentoPage]
 })
-export class QuizPerfilInvestimentoPageModule {}
+export class QuizPerfilInvestimentoPageModule {
+
+
+
+}

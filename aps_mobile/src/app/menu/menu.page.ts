@@ -1,6 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { NavParams } from '@ionic/angular';
-
+import {PersistenciaService, Name} from '../services/persistencia.service';
 
 
 @Component({
@@ -9,7 +8,13 @@ import { NavParams } from '@ionic/angular';
   styleUrls: ['menu.page.scss'],
 })
 
-
-
 export class MenuPage {
+
+  constructor(
+    private persistenciaService: PersistenciaService
+  ) { }
+  
+  public names = this.persistenciaService.all();
+
+
 }

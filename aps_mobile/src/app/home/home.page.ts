@@ -1,7 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { NavController } from '@ionic/angular';
-import {MenuPage} from '../menu/menu.page';
-
+import {PersistenciaService, Name} from '../services/persistencia.service';
 
 @Component({
   selector: 'app-home',
@@ -11,9 +10,21 @@ import {MenuPage} from '../menu/menu.page';
 
 export class HomePage {
 
-  public name: string;
-  menuPage = MenuPage;
+  public name1: Name = {
+    name: ''
+  };
 
-  constructor(public navCtrl: NavController) {
+  constructor(
+    public navCtrl: NavController,
+    private PersistenciaService: PersistenciaService) {
   }
+
+  public handleSave(nnnn) {
+    this.name1 = {
+      name: nnnn
+    };
+    
+    this.PersistenciaService.create(this.name1);
+  }
+
 }

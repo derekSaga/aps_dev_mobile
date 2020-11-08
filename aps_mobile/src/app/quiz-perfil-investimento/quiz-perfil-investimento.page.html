@@ -38,11 +38,11 @@
     </ion-card-content>
   </ion-card>
 
-  <ion-card *ngIf="showResult" color="secundary">
+  <ion-card  *ngIf="showResult" color="secundary">
     <img [src]="possibleResults[mostAnswered].image" class="tv-show-image">
-    <ion-card-content>
+    <ion-card-content *ngFor="let c of names | slice:names.length-1"  >
       <h2 style="padding-bottom: 4%;">
-        Parabéns, Matheus! Identificamos você como um investidor
+        Parabéns, {{c.name}}! Identificamos você como um investidor
         {{possibleResults[mostAnswered].letter}}
       </h2>
       <h3>
@@ -67,5 +67,7 @@
       </ion-grid>
     </ion-card-content>
   </ion-card>
-
+  <!-- <ion-button (click)="" color="dark" expand="block" class="ion-margin-top">
+    Ver último resultado!
+  </ion-button> -->
 </ion-content>
