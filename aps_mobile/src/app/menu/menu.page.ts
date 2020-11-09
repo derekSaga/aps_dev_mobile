@@ -10,9 +10,7 @@ import {PersistenciaService, Name} from '../services/persistencia.service';
 
 export class MenuPage {
 
-  constructor(
-    private persistenciaService: PersistenciaService
-  ) { }
+  constructor(private persistenciaService: PersistenciaService) { }
   
   public names = this.persistenciaService.all();
 

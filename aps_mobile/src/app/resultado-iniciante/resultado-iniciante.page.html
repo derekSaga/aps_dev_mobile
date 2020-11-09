@@ -42,7 +42,7 @@
       <em>Para este perfil recomendamos apenas aplicações a curto prazo para que o aplicante consiga estudar neste meio tempo e passar para outro tipo de perfil.</em>
       <br>
       <br>
-      <ion-button *ngFor="let c of names | slice:names.length-1" size="default" (click)="gerarPDF('Matheus', 'Iniciante')" color="dark" expand="block">
+      <ion-button *ngFor="let c of names | slice:names.length-1" size="default" (click)="gerarPDF(c.name, 'Iniciante')" color="dark" expand="block">
         Gerar PDF
       </ion-button>
     </p>
