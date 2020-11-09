@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AlertController, ModalController, ToastController } from '@ionic/angular';
 import jsPDF from 'jspdf';
+import {PersistenciaService, Name} from '../services/persistencia.service';
 
 @Component({
   selector: 'app-resultado-iniciante',
@@ -12,8 +13,11 @@ export class ResultadoIniciantePage implements OnInit {
   constructor(
     private toastController: ToastController,
     private alertController: AlertController,
-    private modalController: ModalController
+    private modalController: ModalController,
+    private persistenciaService: PersistenciaService
   ) { }
+
+  public names = this.persistenciaService.all();
 
   ngOnInit() {
   }
@@ -47,7 +51,7 @@ export class ResultadoIniciantePage implements OnInit {
     doc.text("Para este perfil recomendamos apenas aplicações a curto prazo para que o ", 10, 120);
     doc.setFontType("italic");
     doc.text("aplicante consiga estudar neste meio tempo e passar para outro tipo de perfil.", 10, 130);
-    doc.save('test.pdf');
+    doc.save('investimento.pdf');
   }
 
 }

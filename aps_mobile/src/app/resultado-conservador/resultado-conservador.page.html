@@ -53,7 +53,7 @@
       <em>Fundo Crédito Privado - 49% do seu capital para investimento</em>
       <br>
       <br>
-      <ion-button size="default" (click)="gerarPDF('Matheus', 'Conservador')" color="dark" expand="block">
+      <ion-button *ngFor="let c of names | slice:names.length-1" size="default" (click)="gerarPDF('Matheus', 'Conservador')" color="dark" expand="block">
         Gerar PDF
       </ion-button>
     </p>

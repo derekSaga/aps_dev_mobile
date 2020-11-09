@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AlertController, ModalController, ToastController } from '@ionic/angular';
 import jsPDF from 'jspdf';
+import {PersistenciaService, Name} from '../services/persistencia.service';
 
 @Component({
   selector: 'app-resultado-conservador',
@@ -12,8 +13,11 @@ export class ResultadoConservadorPage implements OnInit {
   constructor(
     private toastController: ToastController,
     private alertController: AlertController,
-    private modalController: ModalController
+    private modalController: ModalController,
+    private persistenciaService: PersistenciaService
   ) { }
+
+  public names = this.persistenciaService.all();
 
   ngOnInit() {
   }
@@ -54,7 +58,7 @@ export class ResultadoConservadorPage implements OnInit {
     doc.text("Tesouro IPCA - 51% do seu capital para investimento", 10, 160);
     doc.setFontType("italic");
     doc.text("Fundo Crédito Privado - 49% do seu capital para investimento", 10, 170);
-    doc.save('test.pdf');
+    doc.save('investimento.pdf');
   }
 
 }

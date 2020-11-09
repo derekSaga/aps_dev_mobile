@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { AlertController, ModalController, ToastController } from '@ionic/angular';
 import jsPDF from 'jspdf';
+import {PersistenciaService, Name} from '../services/persistencia.service';
+
 
 @Component({
   selector: 'app-resultado-moderado',
@@ -12,8 +14,11 @@ export class ResultadoModeradoPage implements OnInit {
   constructor(
     private toastController: ToastController,
     private alertController: AlertController,
-    private modalController: ModalController
+    private modalController: ModalController,
+    private persistenciaService: PersistenciaService
   ) { }
+
+  public names = this.persistenciaService.all();
 
   ngOnInit() {
   }
@@ -62,7 +67,7 @@ export class ResultadoModeradoPage implements OnInit {
     doc.text("CRI/CRA - 25% do seu capital para investimento", 10, 200);
     doc.setFontType("italic");
     doc.text("COE - 25% do seu capital para investimento", 10, 210);
-    doc.save('test.pdf');
+    doc.save('investimento.pdf');
   }
 
 }

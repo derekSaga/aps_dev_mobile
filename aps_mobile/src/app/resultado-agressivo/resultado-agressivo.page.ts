@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AlertController, ModalController, ToastController } from '@ionic/angular';
+import {PersistenciaService, Name} from '../services/persistencia.service';
 import jsPDF from 'jspdf';
 
 @Component({
@@ -12,9 +13,12 @@ export class ResultadoAgressivoPage implements OnInit {
   constructor(
     private toastController: ToastController,
     private alertController: AlertController,
-    private modalController: ModalController
+    private modalController: ModalController,
+    private persistenciaService: PersistenciaService
   ) { }
 
+  public names = this.persistenciaService.all();
+  
   ngOnInit() {
   }
 
@@ -56,7 +60,7 @@ export class ResultadoAgressivoPage implements OnInit {
     doc.text("Debêntures - 33% do seu capital para investimento", 10, 170);
     doc.setFontType("italic");
     doc.text("CRI/CRA - 33% do seu capital para investimento", 10, 180);
-    doc.save('test.pdf');
+    doc.save('investimentos.pdf');
   }
 
 }

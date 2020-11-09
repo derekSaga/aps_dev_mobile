@@ -70,7 +70,7 @@
       <em>COE - 25% do seu capital para investimento</em>
       <br>
       <br>
-      <ion-button size="default" (click)="gerarPDF('Matheus', 'Moderado')" color="dark" expand="block">
+      <ion-button *ngFor="let c of names | slice:names.length-1" size="default" (click)="gerarPDF(c.name, 'Moderado')" color="dark" expand="block">
         Gerar PDF
       </ion-button>
     </p>

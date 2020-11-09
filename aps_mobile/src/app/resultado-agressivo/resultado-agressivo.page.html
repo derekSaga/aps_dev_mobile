@@ -62,7 +62,7 @@
       <br>
       <br>
       <br>
-      <ion-button size="default" (click)="gerarPDF('Matheus', 'Agressivo')" color="dark" expand="block">
+      <ion-button *ngFor="let c of names | slice:names.length-1" size="default" (click)="gerarPDF(c.name, 'Agressivo')" color="dark" expand="block">
         Gerar PDF
       </ion-button>
     </p>
