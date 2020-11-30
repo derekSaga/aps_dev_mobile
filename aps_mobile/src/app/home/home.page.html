@@ -2,15 +2,15 @@
   <ion-content class="conteudo">
     <h2 class="titulo">Bem-Vindo ao FinApp</h2>
  
-      <ion-item class="input">
-        <ion-label position="floating" class="label">Como podemos te chamar?</ion-label>
-        <ion-input [(ngModel)]="name" type="String" ></ion-input>
+      <ion-item color="#c8ad7f" style="margin-left: 2em; margin-right: 2em; color: #c8ad7f;">
+        <ion-label position="floating" style="color: #c8ad7f;" class="label" color="#c8ad7f">Como podemos te chamar?</ion-label>
+        <ion-input [(ngModel)]="name" type="String" style="color: #c8ad7f;" ></ion-input>
       </ion-item>
   
-      <ion-row>
-        <ion-col style="align-items: center; text-align: center;">
-          <ion-button href="/menu" (click)="handleSave(name)"  class="button" color="medium">
-            <ion-icon name="chevron-forward-outline"></ion-icon>
+      <ion-row color="#c8ad7f" style="color: #c8ad7f;" >
+        <ion-col style="align-items: center; text-align: center; color: #c8ad7f;" color="#c8ad7f">
+          <ion-button href="/menu" (click)="handleSave(name)"  class="button" style="background-color: #c8ad7f" color="#c8ad7f">
+            <ion-icon name="arrow-forward"></ion-icon>
            </ion-button>
         </ion-col>
       </ion-row>

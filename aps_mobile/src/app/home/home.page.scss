@@ -1,7 +1,7 @@
 
 ion-content{
 
-  // --ion-background-color:#1b2c60;
+  --ion-background-color:#23222c;
 }
 
 .button {
@@ -10,6 +10,9 @@ ion-content{
       // justify-content: center;
       // align-content: center;
       // align-items: center;
+      
+      color:#23222c;
+      margin-top: 2em;
 }
 
 .titulo{
@@ -19,7 +22,7 @@ ion-content{
     align-items: center;
     margin-top: 50%;
     margin-bottom: 10%;
-    color: black;
+    color:#c8ad7f;
     font-weight: bold;
   
 }
@@ -29,7 +32,7 @@ ion-content{
     justify-content: center;
     align-content: center;
     align-items: center;
-    
+    color: #c8ad7f;
     
 }
 
@@ -44,7 +47,8 @@ ion-content{
     align-content: center;
     align-items: center;
     margin-bottom: 0em;
-    color: black;
+    color:#c8ad7f;
+    
 }
 
 .conteudo{
