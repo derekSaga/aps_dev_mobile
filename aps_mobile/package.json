@@ -30,6 +30,7 @@
     "jquery": "^3.5.1",
     "jspdf": "^1.5.3",
     "rxjs": "~6.5.5",
+    "stock-info": "^1.2.0",
     "stream": "0.0.2",
     "tslib": "^2.0.0",
     "yahoo-stock-api": "^1.0.5",

@@ -9,11 +9,11 @@
   </ion-item>
 
   <div *ngIf="controll">
-    <ion-card [color]="resultadoPesquisa.variacao_dia_perc >= 0 ? 'light' : 'medium'">
+    <ion-card [color]="resultadoPesquisa.regularMarketChangePercent >= 0 ? 'light' : 'medium'">
 
       <ion-card-header>
-        <ion-card-title>{{resultadoPesquisa.nome_empresa}}</ion-card-title>
-        <ion-card-subtitle>{{resultadoPesquisa.acao}}</ion-card-subtitle>
+        <ion-card-title>{{resultadoPesquisa.longName}}</ion-card-title>
+        <ion-card-subtitle>{{resultadoPesquisa.symbol}}</ion-card-subtitle>
       </ion-card-header>
 
       <ion-card-content>
@@ -22,46 +22,57 @@
             <ion-col>
               <div class="ion-text-center">
                 <ion-label>Variação</ion-label>
-                <p>{{resultadoPesquisa.variacao_dia_perc * 100 | number}}%</p>
+                <p>{{resultadoPesquisa.regularMarketChangePercent | number}}%</p>
               </div>
             </ion-col>
             <ion-col>
               <div class="ion-text-center">
                 <ion-label>Valor Abertura</ion-label>
-                <p>{{resultadoPesquisa.valor_abertura}}</p>
+                <p>{{resultadoPesquisa.regularMarketOpen}}</p>
               </div>
             </ion-col>
             <ion-col>
               <div class="ion-text-center">
                 <ion-label>Valor Final</ion-label>
-                <p>{{resultadoPesquisa.valor_final}}</p>
+                <p>{{resultadoPesquisa.regularMarketPrice}}</p>
               </div>
             </ion-col>
           </ion-row>
 
           <label>Informações Gerais</label>
 
-          <ion-item [color]="resultadoPesquisa.variacao_dia_perc >= 0 ? 'light' : 'medium'">
+          <ion-item [color]="resultadoPesquisa.regularMarketChangePercent >= 0 ? 'light' : 'medium'">
             <div>
-              <label>Endereço: {{resultadoPesquisa.endereco}}</label>
+              <label *ngIf="endereco.address1 != null">Endereço: {{ endereco.address1 }}</label>
+              <label *ngIf="endereco.address1 == null">Endereço: Dado não informado.</label>
             </div>
           </ion-item>
 
-          <ion-item [color]="resultadoPesquisa.variacao_dia_perc >= 0 ? 'light' : 'medium'">
+          <ion-item [color]="resultadoPesquisa.regularMarketChangePercent >= 0 ? 'light' : 'medium'">
             <div>
-              <label>Cidade: {{resultadoPesquisa.cidade}}</label>
+              <label *ngIf="endereco.city != null">Cidade: {{ endereco.city }} </label>
+              <label *ngIf="endereco.city == null">Cidade: Dado não informado. </label>
+            </div>
+          </ion-item>
+
+          <ion-item [color]="resultadoPesquisa.regularMarketChangePercent >= 0 ? 'light' : 'medium'">
+            <div>
+              <label *ngIf="endereco.phone != null">Telefone: {{ endereco.phone }} </label>
+              <label *ngIf="endereco.phone == null">Telefone: Dado não informado. </label>
             </div>
           </ion-item>
           
-          <ion-item [color]="resultadoPesquisa.variacao_dia_perc >= 0 ? 'light' : 'medium'">
+          <ion-item [color]="resultadoPesquisa.regularMarketChangePercent >= 0 ? 'light' : 'medium'">
             <div>
-              <label>Estado: {{resultadoPesquisa.estado}}</label>
+              <label *ngIf="endereco.state != null">Estado: {{ endereco.state }}</label>
+              <label *ngIf="endereco.state == null">Estado: Dado não informado.</label>
             </div>
           </ion-item>
 
-          <ion-item [color]="resultadoPesquisa.variacao_dia_perc >= 0 ? 'light' : 'medium'">
+          <ion-item [color]="resultadoPesquisa.regularMarketChangePercent >= 0 ? 'light' : 'medium'">
             <div>
-              <label>Site: <a href="{{resultadoPesquisa.site}}">{{resultadoPesquisa.site}}</a></label>
+              <label *ngIf="endereco.website != null">Site: <a href="{{endereco.website}}">{{endereco.website}}</a></label>
+              <label *ngIf="endereco.website == null">Site: Dado não informado.</label>
             </div>
           </ion-item>
 
@@ -76,4 +87,5 @@
       <h1>Ação não encontrada.</h1>
     </div>
   </div>
+  
 </ion-content>
