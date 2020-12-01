@@ -14,7 +14,11 @@ const routes: Routes = [
   {
     path: 'quiz-perfil-investimento',
     loadChildren: () => import('./quiz-perfil-investimento/quiz-perfil-investimento.module').then( m => m.QuizPerfilInvestimentoPageModule)
+  },  {
+    path: 'help',
+    loadChildren: () => import('./help/help.module').then( m => m.HelpPageModule)
   },
+
 ];
 
 @NgModule({
