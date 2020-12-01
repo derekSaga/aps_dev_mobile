@@ -20,6 +20,10 @@ const routes: Routes = [
     loadChildren: () => import('./quiz-perfil-investimento/quiz-perfil-investimento.module').then(m => m.QuizPerfilInvestimentoPageModule)
   },
   {
+    path: 'resultado-',
+    loadChildren: () => import('./quiz-perfil-investimento/quiz-perfil-investimento.module').then(m => m.QuizPerfilInvestimentoPageModule)
+  },
+  {
     path: 'menu',
     loadChildren: () => import('./menu/menu.module').then(m => m.MenuPageModule)
   },

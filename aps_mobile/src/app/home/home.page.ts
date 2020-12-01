@@ -11,7 +11,9 @@ import {PersistenciaService, Name} from '../services/persistencia.service';
 export class HomePage {
 
   public name1: Name = {
-    name: ''
+    name: '',
+    perfil: '',
+    prazo:''
   };
 
   constructor(
@@ -21,7 +23,9 @@ export class HomePage {
 
   public handleSave(nnnn) {
     this.name1 = {
-      name: nnnn
+      name: nnnn,
+      perfil: '',
+      prazo:''
     };
     
     this.PersistenciaService.create(this.name1);

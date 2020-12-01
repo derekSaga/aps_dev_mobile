@@ -10,15 +10,16 @@
 </ion-header>
 
 <ion-item>
-  <ion-title class="ion-text-center">
-    Perfil Agressivo:
+  <ion-title class="ion-text-center" *ngFor="let c of names | slice:names.length-1">
+    Perfil Agressivo {{c.prazo}}:
   </ion-title>
 </ion-item>
 
 <ion-content>
-  <ion-item>
+  <ion-item *ngFor="let c of names | slice:names.length-1">
     <p>
       Para pessoas com o seu perfil de investimentos recomendamos as Seguintes aplicações para investir. 
+      <ng-container *ngIf="c.prazo == 'asd' || c.prazo == 'Agressivo' ">
       <br>
       <br>
       <strong>Curto prazo:</strong>
@@ -26,6 +27,7 @@
       <br>
       <em>Perfis agressivos tendem a não possuir investimentos a curto prazo.</em>
       <br>
+      </ng-container>
       <br>
       <br>
       <strong>Médio prazo:</strong>
@@ -62,7 +64,7 @@
       <br>
       <br>
       <br>
-      <ion-button *ngFor="let c of names | slice:names.length-1" size="default" (click)="gerarPDF(c.name, 'Agressivo')" color="dark" expand="block">
+      <ion-button  size="default" (click)="gerarPDF(c.name, 'Agressivo', c.prazo)" color="dark" expand="block">
         Gerar PDF
       </ion-button>
     </p>

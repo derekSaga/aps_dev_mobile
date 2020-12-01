@@ -142,4 +142,8 @@ export class QuizPerfilInvestimentoPage {
       q.checkedAlternative = null;
     }
   }
+
+  public handleSave(nnnn, perfil, prazo) {
+    this.persistenciaService.update(nnnn, perfil, prazo);
+  }
 }

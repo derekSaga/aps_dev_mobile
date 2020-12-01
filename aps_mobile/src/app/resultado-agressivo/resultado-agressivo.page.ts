@@ -25,7 +25,7 @@ export class ResultadoAgressivoPage implements OnInit {
   /*https://www.youtube.com/watch?v=AdoPkp4KzFA -> antigo teste*/
 
   //https://mrrio.github.io/ -> tudo que podemos alterar
-  public async gerarPDF(nome, tipo) {
+  public async gerarPDF(nome, tipo, prazo) {
     const doc = new jsPDF();
     var centeredText = function (text, y) {
       var textWidth = doc.getStringUnitWidth(text) * doc.internal.getFontSize() / doc.internal.scaleFactor;
@@ -36,10 +36,12 @@ export class ResultadoAgressivoPage implements OnInit {
     doc.text("Para pessoas com o seu perfil de investimentos recomendamos as Seguintes", 10, 30);
     doc.text("aplicações para investir:", 10, 40);
 
-    doc.setFontType("bold");
-    doc.text("Curto prazo:", 10, 60);
-    doc.setFontType("italic");
-    doc.text("Perfis agressivos tendem a não possuir investimentos a curto prazo.", 10, 70);
+    if(prazo == "asd" || prazo == "Agressivo"){
+      doc.setFontType("bold");
+      doc.text("Curto prazo:", 10, (prazo=="Agressivo"?60:90));
+      doc.setFontType("italic");
+      doc.text("Perfis agressivos tendem a não possuir investimentos a curto prazo.", 10, 70);
+    }
 
     doc.setFontType("bold");
     doc.text("Médio prazo:", 10, 90);
