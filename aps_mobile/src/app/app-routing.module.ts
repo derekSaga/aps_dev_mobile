@@ -33,6 +33,10 @@ const routes: Routes = [
     loadChildren: () => import('./blog/blog.module').then( m => m.BlogPageModule)
   },
   {
+    path: 'help',
+    loadChildren: () => import('./help/help.module').then( m => m.HelpPageModule)
+  },
+  {
     path: 'resultado-Conservador',
     loadChildren: () => import('./resultado-conservador/resultado-conservador.module').then( m => m.ResultadoConservadorPageModule)
   },

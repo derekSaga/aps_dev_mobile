@@ -1,0 +1,26 @@
+
+ion-content{
+
+  --ion-background-color:white;
+}
+
+ion-toolbar{
+  background-color: black;
+}
+
+.titulo{
+  display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    margin-top: 10%;
+    margin-bottom: 5%;
+    color:black;
+    font-weight: bold;
+  
+}
+
+.content{
+  color: black;
+  
+}
