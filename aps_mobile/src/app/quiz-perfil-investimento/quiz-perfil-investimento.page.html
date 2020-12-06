@@ -29,7 +29,6 @@
           </ion-item>
         </ion-radio-group>
       </ion-list>
-
       <ion-button color="dark" (click)="next()" expand="block"
         [disabled]="questions[currentQuestion].checkedAlternative == null">
         <ion-icon slot="end" name="chevron-forward"></ion-icon>
@@ -42,19 +41,23 @@
     <img [src]="possibleResults[mostAnswered].image" class="tv-show-image">
     <ion-card-content *ngFor="let c of names | slice:names.length-1"  >
       <h2 style="padding-bottom: 4%;">
-        Parabéns, {{c.name}}! Identificamos você como um investidor
-        {{possibleResults[mostAnswered].letter}}
+        Parabéns, {{c.name}}! <br> Identificamos você como um investidor
+        {{possibleResults[mostAnswered].type}}, que {{timeInvest[lastAnswer].text1}}. 
       </h2>
       <h3>
         E isso é ótimo!
         {{possibleResults[mostAnswered].investmentType}}
+      </h3>
+      <br>
+      <h3>
+      {{timeInvest[lastAnswer].text2}}
       </h3>
       <h3 style="font-weight: bolder; padding-top: 3%;">Clique em Saiba Mais e conheça as melhores opções de
         investimento para o seu perfil!</h3>
       <ion-grid>
         <ion-row>
           <ion-col col-6>
-            <ion-button routerLink="/resultado-{{possibleResults[mostAnswered].letter}}" color="dark" expand="block" class="ion-margin-top">
+            <ion-button routerLink="/resultado-{{possibleResults[mostAnswered].type}}" color="dark" expand="block" class="ion-margin-top">
               <label>Saiba mais!</label>
             </ion-button>
           </ion-col>
