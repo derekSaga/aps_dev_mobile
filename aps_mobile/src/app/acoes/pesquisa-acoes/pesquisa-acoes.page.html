@@ -1,0 +1,79 @@
+<ion-content>
+  <ion-item>
+    <ion-input [(ngModel)]="nomeAcao" type="string" placeholder="Informe a ação. Exemplo: GOAU3"></ion-input>
+
+    <ion-button slot="end" (click)="pesquisa_acao()" [disabled]="nomeAcao == ''" color="dark">
+      <ion-icon name="search-outline" slot="icon-only"></ion-icon>
+    </ion-button>
+
+  </ion-item>
+
+  <div *ngIf="controll">
+    <ion-card [color]="resultadoPesquisa.variacao_dia_perc >= 0 ? 'light' : 'medium'">
+
+      <ion-card-header>
+        <ion-card-title>{{resultadoPesquisa.nome_empresa}}</ion-card-title>
+        <ion-card-subtitle>{{resultadoPesquisa.acao}}</ion-card-subtitle>
+      </ion-card-header>
+
+      <ion-card-content>
+        <ion-grid>
+          <ion-row>
+            <ion-col>
+              <div class="ion-text-center">
+                <ion-label>Variação</ion-label>
+                <p>{{resultadoPesquisa.variacao_dia_perc * 100 | number}}%</p>
+              </div>
+            </ion-col>
+            <ion-col>
+              <div class="ion-text-center">
+                <ion-label>Valor Abertura</ion-label>
+                <p>{{resultadoPesquisa.valor_abertura}}</p>
+              </div>
+            </ion-col>
+            <ion-col>
+              <div class="ion-text-center">
+                <ion-label>Valor Final</ion-label>
+                <p>{{resultadoPesquisa.valor_final}}</p>
+              </div>
+            </ion-col>
+          </ion-row>
+
+          <label>Informações Gerais</label>
+
+          <ion-item [color]="resultadoPesquisa.variacao_dia_perc >= 0 ? 'light' : 'medium'">
+            <div>
+              <label>Endereço: {{resultadoPesquisa.endereco}}</label>
+            </div>
+          </ion-item>
+
+          <ion-item [color]="resultadoPesquisa.variacao_dia_perc >= 0 ? 'light' : 'medium'">
+            <div>
+              <label>Cidade: {{resultadoPesquisa.cidade}}</label>
+            </div>
+          </ion-item>
+          
+          <ion-item [color]="resultadoPesquisa.variacao_dia_perc >= 0 ? 'light' : 'medium'">
+            <div>
+              <label>Estado: {{resultadoPesquisa.estado}}</label>
+            </div>
+          </ion-item>
+
+          <ion-item [color]="resultadoPesquisa.variacao_dia_perc >= 0 ? 'light' : 'medium'">
+            <div>
+              <label>Site: <a href="{{resultadoPesquisa.site}}">{{resultadoPesquisa.site}}</a></label>
+            </div>
+          </ion-item>
+
+        </ion-grid>
+      </ion-card-content>
+
+    </ion-card>
+  </div>
+
+  <div *ngIf="resultadoPesquisa == 'Ação não encontrada'">
+    <div class="ion-text-center">
+      <h1>Ação não encontrada.</h1>
+    </div>
+  </div>
+</ion-content>
