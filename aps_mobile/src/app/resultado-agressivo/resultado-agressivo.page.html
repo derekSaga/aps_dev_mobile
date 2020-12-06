@@ -10,59 +10,163 @@
 </ion-header>
 
 <ion-item>
-  <ion-title class="ion-text-center">
-    Perfil Agressivo:
+  <ion-title class="ion-text-center" *ngFor="let c of names | slice:names.length-1">
+    Perfil Agressivo 
+    <br>
+    Investimento {{c.prazo}}:
   </ion-title>
 </ion-item>
 
 <ion-content>
-  <ion-item>
+  <ion-item *ngFor="let c of names | slice:names.length-1">
     <p>
-      Para pessoas com o seu perfil de investimentos recomendamos as Seguintes aplicações para investir. 
+      <ng-container *ngIf="c.prazo == 'nsei' ">
+        Pense no perfil agressivo não como alguém que “rasga dinheiro”. Pelo contrário: é alguém que tolera riscos, por ser o caminho que permitirá a ele potencializar seus resultados. Um investidor com perfil agressivo pode conviver com as oscilações naturais do mercado.
+        <br>
+        <br>
+        Em função dessas características, nada mais natural do que esse investidor ser quem melhor se identifica com a renda variável. Ele sabe que as oscilações fazem parte das características do mercado e dos ativos e, considerando o longo prazo, sabe também que elas são importantes para a valorização do seu investimento.
+        <br>
+        <br>
+        Vamos recorrer a um exemplo para que você entenda melhor. Imagine um gráfico que ilustre um investimento em ações ao longo dos anos que vá de 0 a 100. Olhando de longe para ele, a impressão é que houve um movimento constante. 
+        <br>
+        <br>
+        Entretanto, quando você se aproxima, vê um movimento bastante peculiar, quase um zigue-zague, com os valores oscilando para cima e para baixo.
+        <br>
+        <br>
+        Mas, no final do ciclo, sempre oscilando mais para cima do que para baixo, a ponto de se configurar uma evolução.
+        <br>
+        <br>
+        Agora, pense que cada oscilação para baixo, na realidade de uma empresa, representou um ciclo de desvalorização de seus ativos e, durante esse período, as ações chegaram a perder cerca de 20% de seu valor. 
+        <br>
+        <br>
+        Para o investidor iniciante, isso pode representar a senha para vender os ativos e se livrar daquele negócio o quanto antes, pois a tendência é perder dinheiro. 
+        <br>
+        <br>
+        Não é assim para o investidor agressivo, porque ele acredita que o padrão será ascendente e que é uma questão de tempo até os resultados aparecerem.
+        <br>
+        <br>
+        O investidor agressivo geralmente tem mais conhecimento sobre o mercado que os demais. 
+        <br>
+        <br>
+        Esse perfil assume riscos sabendo onde está pisando e se prepara para eles. Não confunda isso com irresponsabilidade.
+        <br>
+        <br>
+        Neste caso, agressividade tem muito mais a ver com estudo, e ousadia, do que com aposta.
+        <br>
+        <br>
+        <br>
+        Confira a lista de opções abaixo que o perfil agressivo mais investe:
+        <br>
+        <br>
+        <em>Ações</em>
+        <br>
+        <br>
+        <br>
+        <em>Trader</em>
+        <br>
+        <br>
+        <br>
+        <em>BDR</em>
+        <br>
+        <br>
+        <br>
+        <em>Fundos Imobiliários</em>
+        <br>
+        <br>
+        <br>
+        <em>Mercado futuro</em>
+        <br>
+        <br>
+        <br>
+        <em>Debentures</em>
+        <br>
+        <br>
+        <br>
+        <em>CRI/ CRA</em>
+        <br>
+        <br>
+        <br>
+        <em>Fundos multimercado</em>
+      </ng-container>
+      <ng-container *ngIf="c.prazo == 'Longo' ">
+        Perfil agressivo de investidor é o nome dado àqueles que buscam aumentar seu patrimônio, ainda que isto signifique correr mais riscos e enfrentar perdas de curto prazo ocasionais.
+        <br>
+        <br>
+        Inclusive porque o risco e o rendimento de aplicações financeiras tendem a ser proporcionais. Quanto maior o risco, maior o potencial de retorno.
+        <br>
+        <br>
+        Logo, o perfil investidor agressivo costuma estar preparado para eventuais quedas de valores das suas ações e inclusive aproveitar alguns momentos de queda para comprar mais.
+        <br>
+        <br>
+        É comum que este investidor seja mais experiente, conhecendo melhor o funcionamento do mercado financeiro.
+        <br>
+        <br>
+        Confira a lista de opções abaixo:
+        <br>
+        <br>
+        <em>Ações</em>
+        <br>
+        <br>
+        <br>
+        <em>BDRs</em>
+        <br>
+        <br>
+        <br>
+        <em>Mercado Futuro</em>
+        <br>
+        <br>
+        <br>
+        <em>Operações Estruturadas com Opções</em>
+      </ng-container>
+      <ng-container *ngIf="c.prazo == 'Medio' ">
+        O investidor com perfil agressivo tem um conhecimento maior do mercado financeiro. Ele entende a volatilidade do mercado e as oscilações sabendo que o benefício é de longo prazo.
+        <br>
+        <br>
+        A expectativa de retorno desse tipo de investidor é bastante alta, e ele não pode continuar diminuindo a economia.
+        <br>
+        <br>
+        Com esse cenário de juros baixos que estamos vivendo, os investidores buscam por investimentos de maior risco com expectativa de melhor retorno.
+        <br>
+        <br>
+        Mas cuidado: se você se desespera com a primeira queda, esse não é o seu perfil. Afinal, risco / retorno são diretamente proporcionais: quanto maior o rendimento, maior o risco atrelado a ele.
+        <br>
+        <br>
+        Confira a lista de opções abaixo:
+        <br>
+        <br>
+        <em>Debentures</em>
+        <br>
+        <br>
+        <br>
+        <em>COE</em>
+        <br>
+        <br>
+        <br>
+        <em>CRI/ CRA</em>
+        <br>
+        <br>
+        <br>
+        <em>Fundos multimercado</em>
+      </ng-container>
+      <ng-container *ngIf="c.prazo == 'Curto' ">
+        O investidor com perfil agressivo tem um conhecimento maior do mercado financeiro. Ele entende a volatilidade do mercado e as oscilações sabendo que o benefício é de longo prazo.
+        <br>
+        <br>
+        A expectativa de retorno desse tipo de investidor é bastante alta, e ele não pode continuar diminuindo a economia.
+        <br>
+        <br>
+        Com esse cenário de juros baixos que estamos vivendo, os investidores buscam por investimentos de maior risco com expectativa de melhor retorno.
+        <br>
+        <br>
+        Mas cuidado: se você se desespera com a primeira queda, esse não é o seu perfil. Afinal, risco / retorno são diretamente proporcionais: quanto maior o rendimento, maior o risco atrelado a ele.
+        <br>
+        <br>
+        <em>Não é comum um perfil Agressivo investir a curto prazo!</em>
+      </ng-container>
       <br>
       <br>
-      <strong>Curto prazo:</strong>
       <br>
-      <br>
-      <em>Perfis agressivos tendem a não possuir investimentos a curto prazo.</em>
-      <br>
-      <br>
-      <br>
-      <strong>Médio prazo:</strong>
-      <br>
-      <br>
-      <em>Fundos Multimercado - 25% do seu capital para investimento</em>
-      <br>
-      <br>
-      <br>
-      <em>Debêntures - 25% do seu capital para investimento</em>
-      <br>
-      <br>
-      <br>
-      <em>CRI/CRA - 25% do seu capital para investimento</em>
-      <br>
-      <br>
-      <br>
-      <em>COE - 25% do seu capital para investimento</em>
-      <br>
-      <br>
-      <br>
-      <strong>Longo prazo:</strong>
-      <br>
-      <br>
-      <em>Fundos Multimercado - 34% do seu capital para investimento</em>
-      <br>
-      <br>
-      <br>
-      <em>Debêntures - 33% do seu capital para investimento</em>
-      <br>
-      <br>
-      <br>
-      <em>CRI/CRA - 33% do seu capital para investimento</em>
-      <br>
-      <br>
-      <br>
-      <ion-button *ngFor="let c of names | slice:names.length-1" size="default" (click)="gerarPDF(c.name, 'Agressivo')" color="dark" expand="block">
+      <ion-button  size="default" (click)="gerarPDF(c.name, 'Agressivo', c.prazo)" color="dark" expand="block">
         Gerar PDF
       </ion-button>
     </p>
