@@ -36,31 +36,25 @@ export class ResultadoConservadorPage implements OnInit {
     //doc.text("Para pessoas com o seu perfil de investimentos recomendamos as Seguintes", 10, 30);
     var lines;
     var maxLength = doc.internal.pageSize.width-20;
-    if(prazo == "nsei"){
+    if(prazo == "Conservador"){
       lines = doc.splitTextToSize('Perfil de Investidor conservador busca a preservação de recursos, com tolerância zero a perda e alta liquidez', maxLength);
       doc.text(lines,10, 30);
 
-      lines = doc.splitTextToSize('O que você precisa saber para investir a Médio Prazo:', maxLength);
+      lines = doc.splitTextToSize('O investidor conservador é aquele que opta por ter uma maior segurança em seus investimentos. O princípio de mercado é que, quanto menos risco você tiver, menor será o seu potencial de ganho, assim como o seu potencial de perda.', maxLength);
       doc.text(lines,10, 50);
 
-      lines = doc.splitTextToSize('Investimentos de médio prazo são aqueles cujo retorno será obtido, em média, entre dois e cinco anos – assim como o seu resgate. Em geral, os aportes são feitos pelo investidor que visa determinados objetivos no médio prazo, como viagens, a compra de um carro ou outro bem de alto valor, entre outros.', maxLength);
-      doc.text(lines,10, 60);
+      lines = doc.splitTextToSize('No geral, o principal objetivo de um investidor conservador é preservar o seu patrimônio. Por isso, costuma preferir opções que apresentam um baixo risco, como os produtos de renda fixa e evita opções com baixa liquidez, bem como ativos que podem sofrer algum tipo de perda.', maxLength);
+      doc.text(lines,10, 85);
 
-      lines = doc.splitTextToSize('Para que estes objetivos possam ser alcançados por meio dos investimentos de médio prazo, e fundamental que o investidor realize os aportes de maneira correta, analisando a rentabilidade e a liquidez do investimento. Desta forma, ele evitará comprometer sua organização financeira e conseguirá atingir seus objetivos de maneira mais fácil e planejada.', maxLength);
-      doc.text(lines,10, 95);
-
-      lines = doc.splitTextToSize('Investir em determinados produtos de renda fixa, fundos multimercados, entre outros, por exemplo, podem ser boas opções de composição da sua carteira de investimentos de médio prazo.', maxLength);
-      doc.text(lines,10, 135);
-
-      centeredText("Confira a lista de opções abaixo que o perfil Conservador mais investe:", 160);
+      centeredText("Confira a lista de opções abaixo que o perfil Conservador mais investe:", 125);
 
       doc.setFontType("italic");
       
-      doc.text("Tesouro IPCA",10, 180);
-      doc.text("Fundos de crédito privado",10, 200);
-      doc.text("Tesouro Selic",10, 220);
-      doc.text("CDB de liquidez diaria",10, 240);
-      doc.text("Fundos de Renda Fixa",10, 260);
+      doc.text("Tesouro IPCA",10, 145);
+      doc.text("Fundos de crédito privado",10, 165);
+      doc.text("Tesouro Selic",10, 185);
+      doc.text("CDB de liquidez diaria",10, 205);
+      doc.text("Fundos de Renda Fixa",10, 225);
     }
 
     if(prazo == "Longo"){
