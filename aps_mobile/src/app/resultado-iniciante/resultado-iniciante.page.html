@@ -10,39 +10,169 @@
 </ion-header>
 
 <ion-item>
-  <ion-title class="ion-text-center">
-    Perfil Iniciante:
+  <ion-title class="ion-text-center" *ngFor="let c of names | slice:names.length-1">
+    Seu resultado personalizado
   </ion-title>
 </ion-item>
 
 <ion-content>
-  <ion-item>
+  <ion-item *ngFor="let c of names | slice:names.length-1">
     <p>
-      Para pessoas com o seu perfil de investimentos recomendamos as Seguintes aplicações para investir. 
+      <ng-container *ngIf="c.prazo == 'nsei' ">
+        Para pessoas com perfil Iniciante, que não sabem como investir e nem os objetivos finais desse investimento, planejamos um material para ensiná-lo conceitos básicos, super necessários para entrar no mundo dos investimentos. Seguindo este passo a passo, você conseguirá planejar seus investimentos.
+        <br>
+        <br>
+        1. Primeiro passo: Definir onde quer chegar
+        <br>
+        <br>
+        Antes de mais nada é preciso definir seus objetivos e traçar sua estratégia. Para que você quer investir? Qual a finalidade? Viajar? Comprar algo específico? Se aposentar mais cedo? Foque nas suas metas pessoais e tente definir um valor médio para conseguir realizar cada uma delas. Isso vai ajudar na hora de escolher os investimentos e montar uma carteira diversificada. O mais importante é não esperar por milagres ou grandes lucros. Juntar dinheiro é um processo que pode ser um pouco demorado às vezes. Mas não se desespere! Com um bom planejamento, você consegue.
+        <br>
+        <br>
+        2. Investimentos para iniciantes
+        <br>
+        <br>
+        Com tantas opções de investimento, fica difícil decidir em qual aplicar, não é? Os iniciantes devem começar pela Renda Fixa. Na maioria das vezes, os títulos de Renda Fixa são emitidos por bancos, empresas ou pelo   governo para o financiamento de atividades. A sua rentabilidade, que pode ser prefixada ou pós-fixada, é fruto dos juros que as instituições pagam pela aplicação do seu dinheiro nesse tipo de produto.
+        <br>
+        O título prefixado é aquele com o rendimento e o valor de resgate conhecidos no momento que você faz o investimento. Por exemplo, você compra um CDB pré, com taxa de 10% ao ano e prazo de um ano. Caso você tenha investido R$ 100 mil, sabe que vai retirar R$ 110 mil depois de um ano.
+        <br>
+        Já o título pós-fixado é aquele em que a taxa de remuneração é conhecida no momento da aplicação, mas você só fica sabendo o valor de resgate na data de vencimento. Por exemplo, você comprou uma LCI de 180 dias, que remunera a 90% do CDI. Como não sabemos o valor do CDI nesse período, não dá para saber ao certo o valor do resgate. Mas isso pode ser estimado, de acordo com projeções do CDI. Lembrando que, se os juros subirem no período, o rendimento final será maior que o esperado. Ou vice-versa.
+        <br>
+        Além dos títulos, diversos fundos de investimento são classificados como Renda Fixa e, muitas vezes, procuram superar a rentabilidade oferecida por esses títulos. Por isso, vale a pena checar a lista de fundos. Os COEs também podem ser uma opção, pois você investe com o seu capital 100% protegido, e pode ter um retorno superior quando comparado aos outros investimentos.
+        <br>
+        Ou seja, de maneira geral, os investimentos em Renda Fixa podem oferecer mais tranquilidade e uma segurança bem maior, por serem de baixo risco.
+        <br>
+        <br>
+        Confira a lista de opções abaixo:
+        <br>
+        <br>
+        <em>CDB (Certificado de Depósito Bancário)</em>
+        <br>
+        <br>
+        <br>
+        <em>LC (Letras de Câmbio)</em>
+        <br>
+        <br>
+        <br>
+        <em>LCI (Letra de Crédito Imobiliária)</em>
+        <br>
+        <br>
+        <br>
+        <em>LCA (Letra de Crédito do Agronegócio)</em>
+        <br>
+        <br>
+        <br>
+        3. Defina o seu perfil de investidor 
+        <br>
+        <br>
+        É muito importante ressaltar que, antes de começar a investir, é indispensável definir o seu perfil de investidor. Para isso, deve-se analisar todos os objetivos e a tolerância a riscos do investidor. Às vezes, até a quantia disponível para investir pode ajudar na definição.
+        <br>
+        <br>
+        Investidores que não são abertos a nenhum tipo de risco são definidos como conservadores. Os que aceitam enfrentar alguns riscos visando uma maior rentabilidade são definidos como moderados ou arrojados, dependendo do nível de tolerância ao risco.
+        <br>
+        <br>
+        Ou seja, essa é uma etapa muito importante no processo, pois é o que vai direcionar a escolha do investimento ideal para a estratégia traçada pelo investidor.
+        <br>
+        <br>
+        4. Monte a sua reserva para emergências
+        <br>
+        <br>
+        Para criar um fundo para emergências é essencial. Em diversos momentos de nossas vidas, nos deparamos com imprevistos. Desemprego, necessidades familiares, acidentes… Isso tudo pode nos descapitalizar, caso não tenhamos um plano B. Por isso, é sempre necessário prever um dinheiro para esses possíveis acontecimentos.
+        <br>
+        <br>
+        Investimentos com liquidez diária, facilidade no resgate e prazos curtos são as melhores dicas para compor uma reserva emergencial. Fundos de Investimento em Renda Fixa e Fundos de Investimento DI são excelentes opções para essa finalidade. Existem diversas opções a partir de R$ 100, e você também pode ir aplicando nos aportes mensais de acordo como sua disponibilidade e planejamento: R$ 100, R$ 500…
+        <br>
+        <br>
+        O valor que você terá que disponibilizar para essa reserva vai de acordo com:
+        <br>
+        <br>
+        Renda: Empresários, profissionais autônomos e empregados com baixo grau de certeza sobre o valor do salário no fim do mês devem ter um cuidado e uma reserva maior. Já funcionários públicos, que têm mais certeza sobre a sua renda, podem formar um fundo emergencial menor.
+        <br>
+        <br>
+        Responsabilidades:Se você mora de aluguel e tem dependentes financeiros, você deve se esquematizar para ter uma maior reserva.
+        <br>
+        <br>
+        Emprego: Sua reserva também varia de acordo com a sua facilidade para arranjar um novo emprego, caso você seja surpreendido por uma demissão.
+      </ng-container>
+      <ng-container *ngIf="c.prazo == 'Longo' ">
+        Para pessoas com perfil Iniciante, que já sabem o objetivo final dos seus investimentos e avaliaram que precisam de resultados em 10 anos ou mais, temos algumas sujestões para investir da melhor forma, vendo o que realmente faz sentido para você.Os melhores investimentos de longo prazo podem oferecer retornos muito interessantes.        
+        <br>
+        <br>
+        O que você precisa saber para investir a Longo Prazo
+        <br>
+        <br>
+        É difícil prever o que vai ocorrer, mas grande parte dos investidores desejam altas rentabilidades, sobretudo, quando aplicam a longo prazo. Afinal, investimentos a longo prazo podem trazer retornos superiores às opções mais imediatas. A questão é entender quais ativos ter na carteira – e por quanto tempo você pode manter esses produtos no seu portfólio.
+        <br>
+        <br>
+        Em geral, investimentos de longo prazo podem pagar taxas mais atrativas, como é o caso de produtos de renda fixa. Através deles, o investidor se compromete a deixar os recursos alocados em determinada aplicação por mais tempo e, em troca, recebe maiores retornos. Pensa bem:
+        <br>
+        <br>
+        Se você empresta dinheiro a um amigo por um ano, você vai cobrar uma determinada taxa de juros. Mas, se você empresta o mesmo dinheiro para o mesmo amigo por 10 anos, os juros que você vai cobrar serão muito maiores, pois a incerteza e, portanto, o risco será maior.
+        <br>
+        <br>
+        Confira a lista de opções abaixo:
+        <br>
+        <br>
+        <em>Tesouro Direto</em>
+      </ng-container>
+      <ng-container *ngIf="c.prazo == 'Medio' ">
+        Para pessoas com perfil Iniciante, que já sabem o objetivo final dos seus investimentos e avaliaram que precisam de resultados em até 5 anos, temos algumas sujestões para investir da melhor forma, vendo o que realmente faz sentido para você.
+        <br>
+        <br>
+        O que você precisa saber para investir a Médio Prazo
+        <br>
+        <br>
+        Investimentos de médio prazo são aqueles cujo retorno será obtido, em média, entre dois e cinco anos – assim como o seu resgate. Em geral, os aportes são feitos pelo investidor que visa determinados objetivos no médio prazo, como viagens, a compra de um carro ou outro bem de alto valor, entre outros.
+        <br>
+        <br>
+        Para que estes objetivos possam ser alcançados por meio dos investimentos de médio prazo, e fundamental que o investidor realize os aportes de maneira correta, analisando a rentabilidade e a liquidez do investimento. Desta forma, ele evitará comprometer sua organização financeira e conseguirá atingir seus objetivos de maneira mais fácil e planejada.
+        <br>
+        <br>
+        Investir em determinados produtos de renda fixa, fundos multimercados, entre outros, por exemplo, podem ser boas opções de composição da sua carteira de investimentos de médio prazo.
+        <br>
+        <br>
+        Confira a lista de opções abaixo:
+        <br>
+        <br>
+        <em>CDB (Certificado de Depósito Bancário)</em>
+        <br>
+        <br>
+        <br>
+        <em>LCI e LCA para o médio prazo</em>
+      </ng-container>
+      <ng-container *ngIf="c.prazo == 'Curto' ">
+        Para pessoas com perfil Iniciante, que já sabem o objetivo final dos seus investimentos e avaliaram que precisam de resultados em até 2 anos, temos algumas sujestões para investir da melhor forma, vendo o que realmente faz sentido para você.
+        <br>
+        <br>
+        O que você precisa saber para investir a Curto Prazo
+        <br>
+        <br>
+        Como aqui entram os objetivos a serem atingidos em um espaço curto de tempo, são duas as principais características de que devem ser analisadas: o risco e a liquidez.
+        <br>
+        <br>
+        É importante que seja possível resgatar o dinheiro e seus rendimentos no momento que desejar ou precisar, sem dificuldades – por isso, quanto maior a liquidez, melhor.
+        <br>
+        <br>
+        Em relação ao risco, ele é basicamente a incerteza que se pode ter em relação ao rendimento: quanto maior o risco, maiores as chances de ter uma rentabilidade maior e de ganhar muito dinheiro, mas também de se perder e ter uma rentabilidade negativa, por exemplo.
+        <br>
+        <br>
+        No caso de estratégias de curto prazo, o recomendado é que o risco seja baixo para que sejam evitadas possíveis perdas – e se garanta uma rentabilidade mínima e segura. Afinal, com um período curto de tempo, pode ser difícil recuperar rentabilidade perdida.
+        <br>
+        <br>
+        Confira a lista de opções abaixo:
+        <br>
+        <br>
+        <em>CDB (Certificado de Depósito Bancário)</em>
+        <br>
+        <br>
+        <em>Tesouro Selic</em>
+        <br>
+        <br>
+        <em>Fundos de Curto Prazo</em>
+      </ng-container>
       <br>
       <br>
-      <strong>Curto prazo:</strong>
       <br>
-      <br>
-      <em>Tesouro Direto - 34% do seu capital para investimento</em>
-      <br>
-      <br>
-      <br>
-      <em>CDB - 33% do seu capital para investimento</em>
-      <br>
-      <br>
-      <br>
-      <em>Fundos de investimentos em renda fixa - 33% do seu capital para investimento</em>
-      <br>
-      <br>
-      <br>
-      <strong>Médio prazo e Longo prazo:</strong>
-      <br>
-      <br>
-      <em>Para este perfil recomendamos apenas aplicações a curto prazo para que o aplicante consiga estudar neste meio tempo e passar para outro tipo de perfil.</em>
-      <br>
-      <br>
-      <ion-button *ngFor="let c of names | slice:names.length-1" size="default" (click)="gerarPDF(c.name, 'Iniciante')" color="dark" expand="block">
+      <ion-button  size="default" (click)="gerarPDF(c.name, 'Iniciante', c.prazo)" color="dark" expand="block">
         Gerar PDF
       </ion-button>
     </p>

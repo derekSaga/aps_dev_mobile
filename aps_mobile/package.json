@@ -27,6 +27,7 @@
     "@ionic/storage": "^2.3.1",
     "@types/jquery": "^3.5.3",
     "html2canvas": "^1.0.0-rc.7",
+    "ionic": "^5.4.16",
     "jquery": "^3.5.1",
     "jspdf": "^1.5.3",
     "node-sass": "^5.0.0",

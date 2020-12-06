@@ -1,11 +1,12 @@
 import { Injectable } from '@angular/core';
 import { IonicStorageModule } from '@ionic/storage';
-import {MenuPage} from '../menu/menu.page';
 import {Storage} from '@ionic/storage';
 
 
 export interface Name {
   name: string;
+  perfil: string;
+  prazo: string;
 }
 
 @Injectable({
@@ -15,7 +16,7 @@ export interface Name {
 export class PersistenciaService {
 
   private name: Name[] = [];
-  menuPage = MenuPage;
+  
 
 constructor(
   private storage: Storage) {
@@ -33,6 +34,16 @@ private async saveData(){
 
 public create(name: Name) {
   this.name.push({ ...name });
+  this.saveData();
+}
+
+public update(username: string, perfil: string, prazo: string) {
+  const idx = this.name.length - 1;
+  this.name[idx] = { 
+    name: username,
+    perfil: perfil,
+    prazo: prazo
+   };
   this.saveData();
 }
 

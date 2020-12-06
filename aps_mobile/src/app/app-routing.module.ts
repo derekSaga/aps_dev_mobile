@@ -20,6 +20,10 @@ const routes: Routes = [
     loadChildren: () => import('./quiz-perfil-investimento/quiz-perfil-investimento.module').then(m => m.QuizPerfilInvestimentoPageModule)
   },
   {
+    path: 'resultado-',
+    loadChildren: () => import('./quiz-perfil-investimento/quiz-perfil-investimento.module').then(m => m.QuizPerfilInvestimentoPageModule)
+  },
+  {
     path: 'menu',
     loadChildren: () => import('./menu/menu.module').then(m => m.MenuPageModule)
   },
@@ -31,6 +35,10 @@ const routes: Routes = [
   {
     path: 'blog',
     loadChildren: () => import('./blog/blog.module').then( m => m.BlogPageModule)
+  },
+  {
+    path: 'help',
+    loadChildren: () => import('./help/help.module').then( m => m.HelpPageModule)
   },
   {
     path: 'resultado-Conservador',

@@ -10,67 +10,155 @@
 </ion-header>
 
 <ion-item>
-  <ion-title class="ion-text-center">
-    Perfil Moderado:
+  <ion-title class="ion-text-center" *ngFor="let c of names | slice:names.length-1">
+    Seu resultado personalizado
   </ion-title>
 </ion-item>
 
 <ion-content>
-  <ion-item>
+  <ion-item *ngFor="let c of names | slice:names.length-1">
     <p>
-      Para pessoas com o seu perfil de investimentos recomendamos as Seguintes aplicações para investir. 
+      <ng-container *ngIf="c.prazo == 'nsei' ">
+        Perfil moderado é caracterizado por investidores que não abrem mão de segurança nas suas aplicações, mas que estão dispostos a correr alguns riscos para melhorar a sua rentabilidade.       
+        <br>
+        <br>
+        Logo, ele fica entre o conservador e o agressivo, sendo moderado por não estar tão avesso a riscos, mas mantendo a cautela para não sofrer prejuízos desnecessários.
+        <br>
+        <br>
+        Este perfil de investidor ainda não tem interesse em ter uma grande parcela em renda variável mas também entende que a renda fixa pode não potenciar os ganhos no longo prazo.
+        <br>
+        <br>
+        Sendo assim, separamos uma lista de possíveis investimentos para você.
+        <br>
+        <br>
+        Confira a lista de opções abaixo que o perfil moderado mais investe:
+        <br>
+        <br>
+        <em>Tesouro IPCA</em>
+        <br>
+        <br>
+        <br>
+        <em>CRI/ CRA</em>
+        <br>
+        <br>
+        <br>
+        <em>Fundos multimercado</em>
+        <br>
+        <br>
+        <br>
+        <em>Crédito Privado</em>
+        <br>
+        <br>
+        <br>
+        <em>DI</em>
+        <br>
+        <br>
+        <br>
+        <em>Multimercado</em>
+        <br>
+        <br>
+        <br>
+        <em>COE</em>
+      </ng-container>
+      <ng-container *ngIf="c.prazo == 'Longo' ">
+        Perfil moderado é caracterizado por investidores que não abrem mão de segurança nas suas aplicações, mas que estão dispostos a correr alguns riscos para melhorar a sua rentabilidade.
+        <br>
+        <br>
+        O que você precisa saber para investir a Longo Prazo:
+        <br>
+        <br>
+        Existem muitas vantagens no planejamento de investimentos a longo prazo. O maior deles é que a organização para um período maior permite uma melhor diversificação de sua carteira e, com isso, maiores ganhos e menos riscos.
+        <br>
+        <br>
+        Pontualmente, diversos investimentos com prazo maior tendem a cobrar menos Imposto de Renda e oferecer taxas de retorno superiores.
+        <br>
+        <br>
+        Confira a lista de opções abaixo:
+        <br>
+        <br>
+        <em>Tesouro IPCA</em>
+        <br>
+        <br>
+        <br>
+        <em>CRI/ CRA</em>
+        <br>
+        <br>
+        <br>
+        <em>Fundos multimercado</em>
+        <br>
+        <br>
+        <br>
+        <em>COE</em>
+      </ng-container>
+      <ng-container *ngIf="c.prazo == 'Medio' ">
+        Perfil de Investidor Moderado busca a preservação de recursos, com tolerância zero a perda e alta liquidez
+        <br>
+        <br>
+        O que você precisa saber para investir a Médio Prazo:
+        <br>
+        <br>
+        Investimentos de médio prazo são aqueles cujo retorno será obtido, em média, entre dois e cinco anos – assim como o seu resgate. Em geral, os aportes são feitos pelo investidor que visa determinados objetivos no médio prazo, como viagens, a compra de um carro ou outro bem de alto valor, entre outros.
+        <br>
+        <br>
+        Para que estes objetivos possam ser alcançados por meio dos investimentos de médio prazo, e fundamental que o investidor realize os aportes de maneira correta, analisando a rentabilidade e a liquidez do investimento. Desta forma, ele evitará comprometer sua organização financeira e conseguirá atingir seus objetivos de maneira mais fácil e planejada.
+        <br>
+        <br>
+        Investir em determinados produtos de renda fixa, fundos multimercados, entre outros, por exemplo, podem ser boas opções de composição da sua carteira de investimentos de médio prazo.
+        <br>
+        <br>
+        Confira a lista de opções abaixo:
+        <br>
+        <br>
+        <em>Tesouro IPCA</em>
+        <br>
+        <br>
+        <br>
+        <em>CRI/ CRA</em>
+        <br>
+        <br>
+        <br>
+        <em>Fundos multimercado</em>
+        <br>
+        <br>
+        <br>
+        <em>COE</em>
+      </ng-container>
+      <ng-container *ngIf="c.prazo == 'Curto' ">
+        Para pessoas com perfil Moderado, que já sabem o objetivo final dos seus investimentos e avaliaram que precisam de resultados em até 2 anos, temos algumas sujestões para investir da melhor forma, vendo o que realmente faz sentido para você.
+        <br>
+        <br>
+        O que você precisa saber para investir a Curto Prazo
+        <br>
+        <br>
+        Como aqui entram os objetivos a serem atingidos em um espaço curto de tempo, são duas as principais características de que devem ser analisadas: o risco e a liquidez.
+        <br>
+        <br>
+        É importante que seja possível resgatar o dinheiro e seus rendimentos no momento que desejar ou precisar, sem dificuldades – por isso, quanto maior a liquidez, melhor.
+        <br>
+        <br>
+        Em relação ao risco, ele é basicamente a incerteza que se pode ter em relação ao rendimento: quanto maior o risco, maiores as chances de ter uma rentabilidade maior e de ganhar muito dinheiro, mas também de se perder e ter uma rentabilidade negativa, por exemplo.
+        <br>
+        <br>
+        No caso de estratégias de curto prazo, o recomendado é que o risco seja baixo para que sejam evitadas possíveis perdas – e se garanta uma rentabilidade mínima e segura. Afinal, com um período curto de tempo, pode ser difícil recuperar rentabilidade perdida.
+        <br>
+        <br>
+        Confira a lista de opções abaixo:
+        <br>
+        <br>
+        <em>DI</em>
+        <br>
+        <br>
+        <br>
+        <em>Crédito Privado</em>
+        <br>
+        <br>
+        <br>
+        <em>Fundos multimercado</em>
+      </ng-container>
       <br>
       <br>
-      <strong>Curto prazo:</strong>
       <br>
-      <br>
-      <em>Fundo DI - 34% do seu capital para investimento</em>
-      <br>
-      <br>
-      <em>Fundo Crédito Privado - 33% do seu capital para investimento</em>
-      <br>
-      <br>
-      <em>Fundos Multimercado - 33% do seu capital para investimento</em>
-      <br>
-      <br>
-      <br>
-      <strong>Médio prazo:</strong>
-      <br>
-      <br>
-      <em>CDB - 25% do seu capital para investimento</em>
-      <br>
-      <br>
-      <em>Fundos Multimercado - 25% do seu capital para investimento</em>
-      <br>
-      <br>
-      <br>
-      <em>Tesouro IPCA - 25% do seu capital para investimento</em>
-      <br>
-      <br>
-      <br>
-      <em>CRI/CRA - 25% do seu capital para investimento</em>
-      <br>
-      <br>
-      <br>
-      <strong>Longo prazo:</strong>
-      <br>
-      <br>
-      <em>Fundos Multimercado - 25% do seu capital para investimento</em>
-      <br>
-      <br>
-      <br>
-      <em>Tesouro IPCA - 25% do seu capital para investimento</em>
-      <br>
-      <br>
-      <br>
-      <em>CRI/CRA - 25% do seu capital para investimento</em>
-      <br>
-      <br>
-      <br>
-      <em>COE - 25% do seu capital para investimento</em>
-      <br>
-      <br>
-      <ion-button *ngFor="let c of names | slice:names.length-1" size="default" (click)="gerarPDF(c.name, 'Moderado')" color="dark" expand="block">
+      <ion-button  size="default" (click)="gerarPDF(c.name, 'Moderado', c.prazo)" color="dark" expand="block">
         Gerar PDF
       </ion-button>
     </p>

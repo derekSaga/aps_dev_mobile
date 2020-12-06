@@ -10,50 +10,132 @@
 </ion-header>
 
 <ion-item>
-  <ion-title class="ion-text-center">
-    Perfil Conservador:
+  <ion-title class="ion-text-center" *ngFor="let c of names | slice:names.length-1">
+    Seu resultado personalizado
   </ion-title>
 </ion-item>
 
 <ion-content>
-  <ion-item>
+  <ion-item *ngFor="let c of names | slice:names.length-1">
     <p>
-      Para pessoas com o seu perfil de investimentos recomendamos as Seguintes aplicações para investir. 
+      <ng-container *ngIf="c.prazo == 'nsei' ">
+        Perfil de Investidor conservador busca a preservação de recursos, com tolerância zero a perda e alta liquidez
+        <br>
+        <br>
+        O investidor conservador é aquele que opta por ter uma maior segurança em seus investimentos. O princípio de mercado é que, quanto menos risco você tiver, menor será o seu potencial de ganho, assim como o seu potencial de perda.
+        <br>
+        <br>
+        No geral, o principal objetivo de um investidor conservador é preservar o seu patrimônio. Por isso, costuma preferir opções que apresentam um baixo risco, como os produtos de renda fixa e evita opções com baixa liquidez, bem como ativos que podem sofrer algum tipo de perda.
+        <br>
+        <br>
+        <br>
+        Confira a lista de opções abaixo que o perfil Conservador mais investe:
+        <br>
+        <br>
+        <em>Tesouro IPCA</em>
+        <br>
+        <br>
+        <br>
+        <em>Fundos de crédito privado</em>
+        <br>
+        <br>
+        <br>
+        <em>Tesouro Selic</em>
+        <br>
+        <br>
+        <br>
+        <em>CDB de liquidez diaria</em>
+        <br>
+        <br>
+        <br>
+        <em>Fundos de Renda Fixa</em>
+      </ng-container>
+      <ng-container *ngIf="c.prazo == 'Longo' ">
+        Perfil de Investidor conservador busca a preservação de recursos, com tolerância zero a perda e alta liquidez
+        <br>
+        <br>
+        O que você precisa saber para investir a Longo Prazo:
+        <br>
+        <br>
+        Existem muitas vantagens no planejamento de investimentos a longo prazo. O maior deles é que a organização para um período maior permite uma melhor diversificação de sua carteira e, com isso, maiores ganhos e menos riscos.
+        <br>
+        <br>
+        Pontualmente, diversos investimentos com prazo maior tendem a cobrar menos Imposto de Renda e oferecer taxas de retorno superiores.
+        <br>
+        <br>
+        Confira a lista de opções abaixo:
+        <br>
+        <br>
+        <em>Tesouro IPCA</em>
+        <br>
+        <br>
+        <br>
+        <em>Fundos de crédito privado</em>
+      </ng-container>
+      <ng-container *ngIf="c.prazo == 'Medio' ">
+        Perfil de Investidor conservador busca a preservação de recursos, com tolerância zero a perda e alta liquidez
+        <br>
+        <br>
+        O que você precisa saber para investir a Médio Prazo:
+        <br>
+        <br>
+        Investimentos de médio prazo são aqueles cujo retorno será obtido, em média, entre dois e cinco anos – assim como o seu resgate. Em geral, os aportes são feitos pelo investidor que visa determinados objetivos no médio prazo, como viagens, a compra de um carro ou outro bem de alto valor, entre outros.
+        <br>
+        <br>
+        Para que estes objetivos possam ser alcançados por meio dos investimentos de médio prazo, e fundamental que o investidor realize os aportes de maneira correta, analisando a rentabilidade e a liquidez do investimento. Desta forma, ele evitará comprometer sua organização financeira e conseguirá atingir seus objetivos de maneira mais fácil e planejada.
+        <br>
+        <br>
+        Investir em determinados produtos de renda fixa, fundos multimercados, entre outros, por exemplo, podem ser boas opções de composição da sua carteira de investimentos de médio prazo.
+        <br>
+        <br>
+        <br>
+        Confira a lista de opções abaixo:
+        <br>
+        <br>
+        <em>CDB</em>
+        <br>
+        <br>
+        <br>
+        <em>LCI, LCA, LC</em>
+        <br>
+        <br>
+        <br>
+        <em>Fundo crédito privado</em>
+      </ng-container>
+      <ng-container *ngIf="c.prazo == 'Curto' ">
+        Perfil de Investidor conservador busca a preservação de recursos, com tolerância zero a perda e alta liquidez
+        <br>
+        <br>
+        O que você precisa saber para investir a Curto Prazo:
+        <br>
+        <br>
+        Investimentos de curto prazo são aqueles cujo retorno será obtido, em média, entre um a dois anos – assim como o seu resgate. Em geral, os aportes são feitos pelo investidor que visa determinados objetivos a curto prazo, como objetos e metas pontuais.
+        <br>
+        <br>
+        Para que estes objetivos possam ser alcançados por meio dos investimentos de curto prazo, e fundamental que o investidor realize os aportes de maneira correta, analisando a rentabilidade e a liquidez do investimento. Desta forma, ele evitará comprometer sua organização financeira e conseguirá atingir seus objetivos de maneira mais fácil e planejada.
+        <br>
+        <br>
+        Investir em determinados produtos de renda fixa, fundos multimercados, entre outros, por exemplo, podem ser boas opções de composição da sua carteira de investimentos de curto prazo.
+        <br>
+        <br>
+        <br>
+        Confira a lista de opções abaixo:
+        <br>
+        <br>
+        <em>Tesouro Selic</em>
+        <br>
+        <br>
+        <br>
+        <em>CDB de liquidez diaria</em>
+        <br>
+        <br>
+        <br>
+        <em>Fundos de Renda Fixa</em>
+      </ng-container>
       <br>
       <br>
-      <strong>Curto prazo:</strong>
       <br>
-      <br>
-      <em>Tesouro Selic - 34% do seu capital para investimento</em>
-      <br>
-      <br>
-      <em>CDB Liquidez Diária - 33% do seu capital para investimento</em>
-      <br>
-      <br>
-      <em>Fundos RF - 33% do seu capital para investimento</em>
-      <br>
-      <br>
-      <br>
-      <strong>Médio prazo:</strong>
-      <br>
-      <br>
-      <em>CDB, LCI/LCA, LC - 51% do seu capital para investimento</em>
-      <br>
-      <br>
-      <em>Fundo Crédito Privado - 49% do seu capital para investimento</em>
-      <br>
-      <br>
-      <br>
-      <strong>Longo prazo:</strong>
-      <br>
-      <br>
-      <em>Tesouro IPCA - 51% do seu capital para investimento</em>
-      <br>
-      <br>
-      <em>Fundo Crédito Privado - 49% do seu capital para investimento</em>
-      <br>
-      <br>
-      <ion-button *ngFor="let c of names | slice:names.length-1" size="default" (click)="gerarPDF(c.name, 'Conservador')" color="dark" expand="block">
+      <ion-button  size="default" (click)="gerarPDF(c.name, 'Conservador', c.prazo)" color="dark" expand="block">
         Gerar PDF
       </ion-button>
     </p>

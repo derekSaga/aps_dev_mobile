@@ -1,9 +1,6 @@
-import { AlertController } from '@ionic/angular';
 import { AcaoSearchAddressResult } from './../../types/acaoSearchAddressResult.d';
 import { AcaoSearchResult } from './../../types/acaoSearchResult.d';
 import { Component, OnInit } from '@angular/core';
-import { acoes } from '../todas/todas.page.js';
-import { getSingleStockInfo } from 'stock-info';
 import { HttpClient } from '@angular/common/http';
 import { AcoesService } from 'src/app/services/acoes/acoes.service';
 
