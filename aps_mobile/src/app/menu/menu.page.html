@@ -14,7 +14,7 @@
 <ion-content [fullscreen]="true" class="conteudo" style="background-color: #23222c;" color="#23222c">
   <ion-content *ngFor="let c of names | slice:names.length-1" class="conteudo" color="#23222c" padding>
 
-    <h2 class="titulo" >Olá, {{c.name}}.</h2>  
+    <h3 class="titulo" >Olá, {{c.name}}.</h3>  
 
     <ion-button href="/acoes" class="btn1" size="large" color="#23222c">
       Day Trade 
@@ -29,11 +29,12 @@
     </ion-button >
   
     <ion-button href="/resultado-{{c.perfil}}" class="btn1" size="large" color="#23222c">
-      Last Result 
+      Último Resultado 
     </ion-button >
-  
+    
+    <!-- <h6>Conheça o FinApp:</h6> -->
     <ion-button  href="/help" class="help" size="large" color="#23222c">
-      Help
+      Conheça o FinApp
     </ion-button >
     
   </ion-content>

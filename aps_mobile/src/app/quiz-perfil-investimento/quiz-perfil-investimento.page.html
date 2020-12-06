@@ -41,8 +41,8 @@
     <img [src]="possibleResults[mostAnswered].image" class="tv-show-image">
     <ion-card-content *ngFor="let c of names | slice:names.length-1"  >
       <h2 style="padding-bottom: 4%;">
-        Parabéns, {{c.name}}! <br> Identificamos você como um investidor <br><br>
-        {{possibleResults[mostAnswered].type}}, que {{timeInvest[lastAnswer].text1}}. 
+        Parabéns, {{c.name}}! <br><br> Identificamos você como um investidor 
+        {{possibleResults[mostAnswered].type}}, que {{timeInvest[lastAnswer].text1}}. <br>
       </h2>
       <h3>
         E isso é ótimo!
