@@ -1,91 +1,94 @@
 <ion-content>
   <ion-item>
-    <ion-input [(ngModel)]="nomeAcao" type="string" placeholder="Informe a ação. Exemplo: GOAU3"></ion-input>
+    <ion-input [(ngModel)]="nomeAcao" type="string" placeholder="Informe a ação. Exemplo: GOAU3">
+    </ion-input>
 
     <ion-button slot="end" (click)="pesquisa_acao()" [disabled]="nomeAcao == ''" color="dark">
       <ion-icon name="search-outline" slot="icon-only"></ion-icon>
     </ion-button>
-
   </ion-item>
 
   <div *ngIf="controll">
-    <ion-card [color]="resultadoPesquisa.regularMarketChangePercent >= 0 ? 'light' : 'medium'">
-
+    <ion-card [color]="parseQuoteResult().regularMarketChangePercent >= 0 ? 'light' : 'medium'">
+      
       <ion-card-header>
-        <ion-card-title>{{resultadoPesquisa.longName}}</ion-card-title>
-        <ion-card-subtitle>{{resultadoPesquisa.symbol}}</ion-card-subtitle>
+        <ion-card-title>{{parseQuoteResult().longName}}</ion-card-title>
+        <ion-card-subtitle *ngIf="parseQuoteResult().quoteSourceName != 'DELAYED QUOTE'" >{{parseQuoteResult().shortName}} - {{parseQuoteResult().symbol}}</ion-card-subtitle>
       </ion-card-header>
 
       <ion-card-content>
-        <ion-grid>
+        <ion-grid fixed>
           <ion-row>
-            <ion-col>
+            <ion-col >
               <div class="ion-text-center">
                 <ion-label>Variação</ion-label>
-                <p>{{resultadoPesquisa.regularMarketChangePercent | number}}%</p>
+                <p>{{parseQuoteResult().regularMarketChangePercent * 10 | number}}%</p>
               </div>
             </ion-col>
-            <ion-col>
+            <ion-col >
               <div class="ion-text-center">
                 <ion-label>Valor Abertura</ion-label>
-                <p>{{resultadoPesquisa.regularMarketOpen}}</p>
+                <p>{{parseQuoteResult().regularMarketPreviousClose}}</p>
               </div>
             </ion-col>
             <ion-col>
               <div class="ion-text-center">
                 <ion-label>Valor Final</ion-label>
-                <p>{{resultadoPesquisa.regularMarketPrice}}</p>
+                <p>{{parseQuoteResult().regularMarketPrice}}</p>
               </div>
             </ion-col>
           </ion-row>
 
           <label>Informações Gerais</label>
 
-          <ion-item [color]="resultadoPesquisa.regularMarketChangePercent >= 0 ? 'light' : 'medium'">
+          <ion-item [color]="parseQuoteResult().regularMarketChangePercent >= 0 ? 'light' : 'medium'">
             <div>
-              <label *ngIf="endereco.address1 != null">Endereço: {{ endereco.address1 }}</label>
-              <label *ngIf="endereco.address1 == null">Endereço: Dado não informado.</label>
+              <label *ngIf="parseAddressResult().address1 != null">Endereço: {{ parseAddressResult().address1 }}</label>
+              <label *ngIf="parseAddressResult().address1 == null">Endereço: Dado não informado.</label>
             </div>
           </ion-item>
 
-          <ion-item [color]="resultadoPesquisa.regularMarketChangePercent >= 0 ? 'light' : 'medium'">
+          <ion-item [color]="parseQuoteResult().regularMarketChangePercent >= 0 ? 'light' : 'medium'">
             <div>
-              <label *ngIf="endereco.city != null">Cidade: {{ endereco.city }} </label>
-              <label *ngIf="endereco.city == null">Cidade: Dado não informado. </label>
+              <label *ngIf="parseAddressResult().city != null">Cidade: {{ parseAddressResult().city }} </label>
+              <label *ngIf="parseAddressResult().city == null">Cidade: Dado não informado. </label>
             </div>
           </ion-item>
 
-          <ion-item [color]="resultadoPesquisa.regularMarketChangePercent >= 0 ? 'light' : 'medium'">
+          <ion-item [color]="parseQuoteResult().regularMarketChangePercent >= 0 ? 'light' : 'medium'">
             <div>
-              <label *ngIf="endereco.phone != null">Telefone: {{ endereco.phone }} </label>
-              <label *ngIf="endereco.phone == null">Telefone: Dado não informado. </label>
+              <label *ngIf="parseAddressResult().phone != null">Telefone: {{ parseAddressResult().phone }} </label>
+              <label *ngIf="parseAddressResult().phone == null">Telefone: Dado não informado. </label>
             </div>
           </ion-item>
           
-          <ion-item [color]="resultadoPesquisa.regularMarketChangePercent >= 0 ? 'light' : 'medium'">
+          <ion-item [color]="parseQuoteResult().regularMarketChangePercent >= 0 ? 'light' : 'medium'">
             <div>
-              <label *ngIf="endereco.state != null">Estado: {{ endereco.state }}</label>
-              <label *ngIf="endereco.state == null">Estado: Dado não informado.</label>
+              <label *ngIf="parseAddressResult().state != null">Estado: {{ parseAddressResult().state }}</label>
+              <label *ngIf="parseAddressResult().state == null">Estado: Dado não informado.</label>
             </div>
           </ion-item>
 
-          <ion-item [color]="resultadoPesquisa.regularMarketChangePercent >= 0 ? 'light' : 'medium'">
+          <ion-item [color]="parseQuoteResult().regularMarketChangePercent >= 0 ? 'light' : 'medium'">
             <div>
-              <label *ngIf="endereco.website != null">Site: <a href="{{endereco.website}}">{{endereco.website}}</a></label>
-              <label *ngIf="endereco.website == null">Site: Dado não informado.</label>
+              <label *ngIf="parseAddressResult().website != null">Site: <a href="{{parseAddressResult().website}}">{{parseAddressResult().website}}</a></label>
+              <label *ngIf="parseAddressResult().website == null">Site: Dado não informado.</label>
             </div>
           </ion-item>
 
         </ion-grid>
       </ion-card-content>
-
     </ion-card>
+    <div align="end">
+      <ion-button (click)="saveQuote()" color="dark">
+        <ion-icon name="add-outline" slot="icon-only"></ion-icon>
+      </ion-button>
+    </div>
   </div>
 
-  <div *ngIf="resultadoPesquisa == 'Ação não encontrada'">
+  <div *ngIf="quoteResult == null && nomeAcao != ''">
     <div class="ion-text-center">
       <h1>Ação não encontrada.</h1>
     </div>
   </div>
-  
 </ion-content>

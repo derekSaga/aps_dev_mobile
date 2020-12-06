@@ -14,7 +14,7 @@
 <ion-content [fullscreen]="true" class="conteudo">
   <ion-content *ngFor="let c of names | slice:names.length-1" class="conteudo" padding>
 
-    <h2 class="titulo" >Olá, {{c.name}}.</h2>
+    <h2 class="titulo" >Olá, {{c.name | titlecase}}.</h2>
 
     <ion-button href="/acoes" class="btn1" size="large" color="dark">
       Day Trade <ion-icon style="margin-left: 40%;" name="arrow-forward"></ion-icon>

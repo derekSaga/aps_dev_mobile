@@ -25,17 +25,16 @@
 
   </ion-segment>
 
-  <!-- <ion-item>
-    <ion-label></ion-label>
-    <ion-input type="string" placeholder="Pesquisa Título"></ion-input>
-  </ion-item> -->
-
-  <ion-list>
-    <ion-card *ngFor="let acao of acoes" [color]="acao.variacao_dia_perc >= 0 ? 'light' : 'medium'">
-
+   <ion-list>
+    <ion-card *ngFor="let acao of acoes" [color]="parseQuote(acao).regularMarketChangePercent >= 0 ? 'light' : 'medium'">
+      
+      <ion-button (click)="removeQuote(acao)" expand="block" fill="clear" shape="round">
+        <ion-icon name="close-outline" color="danger"></ion-icon>
+      </ion-button>
+      
       <ion-card-header>
-        <ion-card-title>{{acao.nome_empresa}}</ion-card-title>
-        <ion-card-subtitle>{{acao.acao}}</ion-card-subtitle>
+        <ion-card-title>{{parseQuote(acao).longName}}</ion-card-title>
+        <ion-card-subtitle>{{parseQuote(acao).shortName}} - {{parseQuote(acao).symbol}}</ion-card-subtitle>
       </ion-card-header>
 
 
@@ -45,19 +44,19 @@
             <ion-col>
               <div class="ion-text-center">
                 <ion-label>Variação</ion-label>
-                <p>{{acao.variacao_dia_perc * 100 | number}}%</p>
+                <p>{{parseQuote(acao).regularMarketChangePercent * 10 | number}}%</p>
               </div>
             </ion-col>
             <ion-col>
               <div class="ion-text-center">
-                <ion-label>Valor Abertura</ion-label>
-                <p>{{acao.valor_abertura}}</p>
+                <ion-label >Valor Abertura</ion-label>
+                <p>{{parseQuote(acao).regularMarketPreviousClose}}</p>
               </div>
             </ion-col>
             <ion-col>
               <div class="ion-text-center">
                 <ion-label>Valor Final</ion-label>
-                <p>{{acao.valor_final}}</p>
+                <p>{{parseQuote(acao).regularMarketPrice}}</p>
               </div>
             </ion-col>
           </ion-row>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AcoesService } from '../services/acoes/acoes.service';
 
 @Component({
   selector: 'app-acoes',
@@ -130,7 +131,7 @@ export class AcoesPage implements OnInit {
     }
   ];
 
-  public organizeAcoes(num) {
+  public organizeAcoes(num: number) {
     if (num === 1) {
       // tslint:disable-next-line: only-arrow-functions
       this.acoes = this.acoes.sort(function(a, b) {
@@ -153,9 +154,14 @@ export class AcoesPage implements OnInit {
     }
   }
 
-  constructor() { }
+  
+  constructor(private acaoService: AcoesService) { }
 
   ngOnInit() {
+  }
+
+  public alterControll(){
+    this.acaoService.controll = false;
   }
 
 }
