@@ -11,16 +11,14 @@
 
 <ion-item>
   <ion-title class="ion-text-center" *ngFor="let c of names | slice:names.length-1">
-    Perfil Conservador:
-    <br>
-    Investimento {{c.prazo}}:
+    Seu resultado personalizado
   </ion-title>
 </ion-item>
 
 <ion-content>
   <ion-item *ngFor="let c of names | slice:names.length-1">
     <p>
-      <ng-container *ngIf="c.prazo == 'Conservador' ">
+      <ng-container *ngIf="c.prazo == 'nsei' ">
         Perfil de Investidor conservador busca a preservação de recursos, com tolerância zero a perda e alta liquidez
         <br>
         <br>

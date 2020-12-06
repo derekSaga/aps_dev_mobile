@@ -10,21 +10,8 @@ import {PersistenciaService, Name} from '../services/persistencia.service';
 
 export class HelpPage {
 
-  public name1: Name = {
-    name: ''
-  };
-
   constructor(
-    public navCtrl: NavController,
-    private PersistenciaService: PersistenciaService) {
-  }
-
-  public handleSave(nnnn) {
-    this.name1 = {
-      name: nnnn
-    };
-    
-    this.PersistenciaService.create(this.name1);
+    public navCtrl: NavController) {
   }
 
 }

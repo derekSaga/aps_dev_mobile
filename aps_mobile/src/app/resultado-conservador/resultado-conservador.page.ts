@@ -36,7 +36,7 @@ export class ResultadoConservadorPage implements OnInit {
     //doc.text("Para pessoas com o seu perfil de investimentos recomendamos as Seguintes", 10, 30);
     var lines;
     var maxLength = doc.internal.pageSize.width-20;
-    if(prazo == "Conservador"){
+    if(prazo == "nsei"){
       lines = doc.splitTextToSize('Perfil de Investidor conservador busca a preservação de recursos, com tolerância zero a perda e alta liquidez', maxLength);
       doc.text(lines,10, 30);
 
@@ -70,7 +70,7 @@ export class ResultadoConservadorPage implements OnInit {
       lines = doc.splitTextToSize('Pontualmente, diversos investimentos com prazo maior tendem a cobrar menos Imposto de Renda e oferecer taxas de retorno superiores.', maxLength);
       doc.text(lines,10, 100);
 
-      centeredText("Confira a lista de opções abaixo que o perfil agressivo mais investe:", 130);
+      centeredText("Confira a lista de opções abaixo:", 130);
 
       doc.setFontType("italic");
       

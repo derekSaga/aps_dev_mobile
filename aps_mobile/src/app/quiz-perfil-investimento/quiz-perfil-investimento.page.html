@@ -41,7 +41,7 @@
     <img [src]="possibleResults[mostAnswered].image" class="tv-show-image">
     <ion-card-content *ngFor="let c of names | slice:names.length-1"  >
       <h2 style="padding-bottom: 4%;">
-        Parabéns, {{c.name}}! <br> Identificamos você como um investidor
+        Parabéns, {{c.name}}! <br> Identificamos você como um investidor <br><br>
         {{possibleResults[mostAnswered].type}}, que {{timeInvest[lastAnswer].text1}}. 
       </h2>
       <h3>
@@ -57,7 +57,7 @@
       <ion-grid>
         <ion-row>
           <ion-col col-6>
-            <ion-button *ngFor="let c of names | slice:names.length-1" (click)="handleSave(c.name, possibleResults[mostAnswered].letter, possibleResults[mostAnswered].letter)" routerLink="/resultado-{{possibleResults[mostAnswered].letter}}" color="dark" expand="block" class="ion-margin-top">
+            <ion-button *ngFor="let c of names | slice:names.length-1" (click)="handleSave(c.name, possibleResults[mostAnswered].type, timeInvest[lastAnswer].prazo)" routerLink="/resultado-{{possibleResults[mostAnswered].type}}" color="dark" expand="block" class="ion-margin-top">
               <label>Saiba mais!</label>
             </ion-button>
           </ion-col>
