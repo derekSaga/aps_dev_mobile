@@ -1,15 +1,15 @@
-<ion-header >
-  <ion-toolbar color = "dark">
+<ion-header color="#fffff">
+  <ion-toolbar color="#fffff">
     <ion-buttons routerLink="/menu" slot="start">
-      <ion-button>
-        <ion-icon name="home" slot="icon-only"></ion-icon>
+      <ion-button >
+        <ion-icon style="color: #ffff;" name="home" slot="icon-only"></ion-icon>
       </ion-button>
     </ion-buttons>
-    <ion-title>FinApp</ion-title>
+    <ion-title style="color: #ffff;" >FinApp</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-item>
+<ion-item style="background-color: #23222c;" >
   <h2 style="font-weight: bold;">Blog de Finanças</h2>
 </ion-item>
 
@@ -20,17 +20,52 @@
 
 <ion-content >
 
-  <ion-card (click) = "showModal()" *ngFor="let i of [1,2,3,4]" color= "dark" >
-    <img [src]="'https://picsum.photos/id/'+(50 + i)+'/340/150'">
-    <ion-card-header >
-      <ion-card-subtitle style="color: white ">Bolsa de valores</ion-card-subtitle>
-      <ion-card-title style="color: white ">Como investir</ion-card-title>
-    </ion-card-header>
+    <ion-card (click) = "showModal1()" color= "dark" >
+      <img src="https://i0.wp.com/www.dci.com.br/wp-content/uploads/2020/07/Screenshot_37.png?resize=925%2C607&ssl=1">
+      <ion-card-header >
+        <ion-card-subtitle style="color: white ">Bolsa de valores</ion-card-subtitle>
+        <ion-card-title style="color: white ">Como investir</ion-card-title>
+      </ion-card-header>
+    
+      <ion-card-content  >
+        <p>Será que investir na Bolsa de Valores é mesmo tão caro e difícil quanto você pensa?</p>
+      </ion-card-content>
+    </ion-card>
+    <ion-card (click) = "showModal4()" color= "dark" >
+      <img src="https://blog.rico.com.vc/hs-fs/hubfs/renda-variavel-introducao.jpg?width=699&name=renda-variavel-introducao.jpg">
+      <ion-card-header >
+        <ion-card-subtitle style="color: white ">Investimetos</ion-card-subtitle>
+        <ion-card-title style="color: white ">O que significa investir a curto, médio e longo prazo?</ion-card-title>
+      </ion-card-header>
+    
+      <ion-card-content  >
+        <p>Menos de dois anos ou mais de uma década: o tempo que você pode deixar o dinheiro rendendo
+           influencia a rentabilidade de uma aplicação. Entenda o porquê.</p>
+      </ion-card-content>
+    </ion-card>
+    <ion-card (click) = "showModal2()" color= "dark" >
+      <img src="https://blog.rico.com.vc/hs-fs/hubfs/renda-variavel-o-que-e.jpg?width=670&name=renda-variavel-o-que-e.jpg">
+      <ion-card-header >
+        <ion-card-subtitle style="color: white ">Investimetos</ion-card-subtitle>
+        <ion-card-title style="color: white ">Investimento em Renda Variável: Guia Para Começar Sem Medo</ion-card-title>
+      </ion-card-header>
+    
+      <ion-card-content  >
+        <p>Afinal, para quem nunca se aventurou na renda variável, é normal sentir medo antes de começar a investir em ações, por exemplo.
   
-    <ion-card-content  >
-      <p>Será que investir na Bolsa de Valores é mesmo tão caro e difícil quanto você pensa?</p>
-    </ion-card-content>
-  </ion-card>
-
+          Se você faz parte desse grupo, saiba que não está sozinho.</p>
+      </ion-card-content>
+    </ion-card>
+    <ion-card (click) = "showModal3()" color= "dark" >
+      <img src="https://www.onze.com.br/blog/wp-content/uploads/2020/03/shutterstock_791955673.jpg">
+      <ion-card-header >
+        <ion-card-subtitle style="color: white ">Poupança</ion-card-subtitle>
+        <ion-card-title style="color: white ">POR QUE SAIR DA POUPANÇA?</ion-card-title>
+      </ion-card-header>
+    
+      <ion-card-content  >
+        <p>Por que sair da poupança e aplicar em produtos de renda fixa?</p>
+      </ion-card-content>
+    </ion-card>
   
   
