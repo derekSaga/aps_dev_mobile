@@ -1,6 +1,7 @@
 import { areAllEquivalent } from '@angular/compiler/src/output/output_ast';
 import { Component, OnInit } from '@angular/core';
 import { AlertController, ModalController, ToastController } from '@ionic/angular';
+import {PersistenciaService, Name} from '../services/persistencia.service';
 
 type Question = {
   text: string;
@@ -84,8 +85,12 @@ export class QuizPerfilInvestimentoPage {
   constructor(
     private toastController: ToastController,
     private alertController: AlertController,
-    private modalController: ModalController
+    private modalController: ModalController,
+    private persistenciaService: PersistenciaService
   ) { }
+ 
+  
+  public names = this.persistenciaService.all();
 
   public next() {
     if (this.currentQuestion === this.questions.length - 1) {
