@@ -4,12 +4,12 @@
  
       <ion-item color="#c8ad7f" style="margin-left: 2em; margin-right: 2em; color: #000000;">
         <ion-label position="floating" style="color: #000000;" class="label" color="#000000">Como podemos te chamar?</ion-label>
-        <ion-input [(ngModel)]="name" type="String" style="color: #000000;" ></ion-input>
+        <ion-input [(ngModel)]="name1.name" type="String" style="color: #000000;" ></ion-input>
       </ion-item>
   
       <ion-row color="#c8ad7f" style="color: #000000" >
         <ion-col style="align-items: center; text-align: center; color: #000000" color="#000000">
-          <ion-button href="/menu" (click)="handleSave(name)"  class="button" style="background-color: #000000" color="#fffff">
+          <ion-button href="/menu" (click)="handleSave(name1.name)"  class="button" style="background-color: #000000" color="#fffff">
             <ion-icon name="arrow-forward"></ion-icon>
            </ion-button>
         </ion-col>
